@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- bengali-sweets.html -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="Bengali Sweets, Rasgulla, Cham Cham, Rasmalai, Indian Sweets">
+    <meta name="description" content="Authentic Bengali Sweets from Jaswant Sweets - Premium quality traditional sweets">
+    <title>Bengali Sweets | Jaswant Sweets</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/slick/slick/slick.css">
+    <link rel="stylesheet" href="plugins/lightGallery-master/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+    <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="plugins/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="plugins/chikery-icon/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Category Header Styles */
+        .category-header {
+            text-align: center;
+            position: relative;
+            margin: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .category-header h2 {
+            display: inline-block;
+            background: #fff;
+            padding: 0 25px;
+            position: relative;
+            top: 10px;
+            font-size: 28px;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Category Tabs Styles */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 30px 0 40px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .category-tabs li {
+            margin: 0 15px 10px;
+        }
+        
+        .category-tabs li a {
+            display: block;
+            padding: 10px 0;
+            color: #555;
+            text-decoration: none;
+            position: relative;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .category-tabs li a:hover {
+            color: #fcb800;
+        }
+        
+        .category-tabs li.active a {
+            color: #fcb800;
+            font-weight: 600;
+        }
+        
+        .category-tabs li.active a:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #fcb800;
+            animation: underline 0.3s ease-out;
+        }
+        
+        @keyframes underline {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .category-header h2 {
+                font-size: 22px;
+                padding: 0 15px;
+            }
+            
+            .category-tabs {
+                margin: 20px 0 30px;
+            }
+            
+            .category-tabs li {
+                margin: 0 10px 8px;
+            }
+            
+            .category-tabs li a {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .category-header h2 {
+                font-size: 20px;
+            }
+            
+            .category-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 10px;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .category-tabs li {
+                display: inline-block;
+                margin: 0 8px;
+            }
+        }
+    </style>
+      <style>
+        /* Add these new styles */
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px; /* Adds space on both sides */
+        }
+        
+        .ps-product {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px; /* Fixed height */
+            object-fit: cover; /* Ensures images maintain aspect ratio */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .ps-product__content {
+            padding: 15px 0;
+        }
+        
+        .ps-product__title {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-container {
+                padding: 0 20px;
+            }
+            
+            .product-image {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .product-container {
+                padding: 0 1500px;
+            }
+            
+            .product-image {
+                height: 180px;
+            }
+        }
+        
+        /* Keep your existing category header and tabs styles */
+    </style>
+</head>
+  <body>
+    <header class="header header--default header--home-4 line" data-sticky="true">
+      <div class="header__left">
+        <ul class="ps-list--social">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="header__center">
+        <nav class="header__navigation left">
+          <ul class="menu">
+            <li class="menu-item-has-children"><a href="index-2.html">Home</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+              <ul class="sub-menu">
+                <li class="current-menu-item "><a href="index-2.html">Homepage 1</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="shop-default.html">Shop</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+              <ul class="sub-menu">
+                <li><a href="shop-fullwidth-no-slidebar.html">Dry Fruit Sweets</a></li>
+                <li class="current-menu-item"><a href="bengali_sweets.html">Bengali Sweets</a></li>
+                <li><a href="#">Sugar-Free Sweets</a></li>
+                <li><a href="#">Traditional Sweets</a></li>
+              </ul>
+            </li>
+            <li class="current-menu-item "><a href="about-us.html">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__logo"><a class="ps-logo" href="index-2.html"><img src="img/logo.png" alt="Jaswant Sweets"></a></div>
+        <nav class="header__navigation right">
+          <ul class="menu">
+            <li class="menu-item-has-children"><a href="about-us.html">Pages</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+              <ul class="sub-menu">
+                <li class="current-menu-item "><a href="about-us.html">About</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-2.html">Checkout</a>
+                </li>
+                <li class="current-menu-item "><a href="whishlist.html">Whishlist</a>
+                </li>
+                <li class="current-menu-item "><a href="homepage-4.html">Compare</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="blog-grid.html">News</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+              <ul class="sub-menu">
+                <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a>
+                </li>
+                <li class="current-menu-item "><a href="blog-grid-fullwidth.html">Blog grid fullwidth</a>
+                </li>
+                <li class="current-menu-item "><a href="blog-list.html">Blog List</a>
+                </li>
+                <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a>
+                </li>
+              </ul>
+            </li>
+            <li class="current-menu-item "><a href="contact-us.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__actions"><a class="ps-search-btn" href="#"><i class="fa fa-search"></i></a><a href="#"><i class="fa fa-heart-o"></i></a>
+          <div class="ps-cart--mini"><a class="ps-cart__toggle" href="#"><i class="fa fa-shopping-basket"></i><span><i>0</i></span></a>
+            <div class="ps-cart__content">
+              <div class="ps-cart__items">
+                <p>Your cart is currently empty.</p>
+              </div>
+              <div class="ps-cart__footer">
+                <figure><a class="ps-btn" href="shopping-cart.html">View Cart</a><a class="ps-btn ps-btn--dark" href="checkout.html">Checkout</a></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="header header--mobile" data-sticky="false">
+      <div class="header__content">
+        <div class="header__left"><a class="ps-toggle--sidebar" href="#navigation-mobile"><i class="fa fa-bars"></i></a></div>
+        <div class="header__center"><a class="ps-logo" href="#"><img src="img/logo.png" alt=""></a></div>
+        <div class="header__right">
+          <div class="header__actions"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+        </div>
+      </div>
+    </header>
+    <div class="ps-panel--sidebar" id="navigation-mobile">
+      <div class="ps-panel__header">
+        <h3>Menu</h3>
+      </div>
+      <div class="ps-panel__content">
+        <ul class="menu--mobile">
+          <li class="menu-item-has-children"><a href="index-2.html">Home</a><span class="sub-toggle"></span>
+            <ul class="sub-menu">
+              <li class="current-menu-item "><a href="index-2.html">Homepage 1</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item-has-children"><a href="shop-default.html">Shop</a><span class="sub-toggle"></span>
+            <ul class="sub-menu">
+              <li><a href="shop-fullwidth-no-slidebar.html">Dry Fruit Sweets</a></li>
+              <li class="current-menu-item"><a href="bengali_sweets.html">Bengali Sweets</a></li>
+              <li><a href="#">Sugar-Free Sweets</a></li>
+              <li><a href="#">Traditional Sweets</a></li>
+            </ul>
+          </li>
+          <li class="current-menu-item "><a href="about-us.html">About</a>
+          </li>
+          <li class="menu-item-has-children"><a href="about-us.html">Pages</a><span class="sub-toggle"></span>
+            <ul class="sub-menu">
+              <li class="current-menu-item "><a href="about-us.html">About</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-2.html">Checkout</a>
+              </li>
+              <li class="current-menu-item "><a href="whishlist.html">Whishlist</a>
+              </li>
+              <li class="current-menu-item "><a href="homepage-4.html">Compare</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item-has-children"><a href="blog-grid.html">News</a><span class="sub-toggle"></span>
+            <ul class="sub-menu">
+              <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a>
+              </li>
+              <li class="current-menu-item "><a href="blog-grid-full-width.html">Blog grid fullwidth</a>
+              </li>
+              <li class="current-menu-item "><a href="blog-list.html">Blog List</a>
+              </li>
+              <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a>
+              </li>
+            </ul>
+          </li>
+          <li class="current-menu-item "><a href="contact-us.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation--list">
+      <div class="navigation__content"><a class="navigation__item active" href="index-2.html"><i class="fa fa-home"></i></a><a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile"><i class="fa fa-bars"></i></a><a class="navigation__item ps-toggle--sidebar" href="#search-sidebar"><i class="fa fa-search"></i></a><a class="navigation__item ps-toggle--sidebar" href="#cart-mobile"><i class="fa fa-shopping-basket"></i></a></div>
+    </div>
+    <!--include search-sidebar-->
+    <div class="ps-hero ps-hero--shopping bg--cover" data-background="img/hero/shop-hero.png">
+        <div class="ps-hero__container">
+          <div class="ps-breadcrumb">
+            <ul class="breadcrumb">
+              <li><a href="index-2.html">Home</a></li>
+              <li>Bengali Sweets</li>
+            </ul>
+          </div>
+          <h1 class="ps-hero__heading">Our Delicious Sweets</h1>
+        </div>
+      </div>
+      
+      <div class="product-container"> <!-- New container div with padding -->
+          <ul class="category-tabs">
+              <li><a href="shop-fullwidth-no-sidebar.html">Dry Fruit Based Sweets</a></li>
+              <li class="active"><a href="bengali_sweets.html">Bengali Sweets</a></li>
+              <li><a href="#">Sugar-Free Sweets</a></li>
+              <li><a href="#">Indian Traditional Sweets</a></li>
+          </ul>
+          
+          <div class="ps-product-box five-column">
+              <div class="row">
+                  <!-- Badam Kalli -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/badam-kalli2.jpg"
+                               alt="Badam Kalli"
+                               data-default="img/product/badam-kalli2.jpg"
+                               data-hover="img/product/badam-kalli-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Badam Kalli</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Cham Cham -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/cham-cham.jpg"
+                               alt="Cham Cham"
+                               data-default="img/product/cham-cham.jpg"
+                               data-hover="img/product/cham-cham-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Cham Cham</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Continue with other products in the same format -->
+                  <!-- China Roll -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/china-roll.jpg"
+                               alt="China Roll"
+                               data-default="img/product/china-roll.jpg"
+                               data-hover="img/product/china-roll-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">China Roll</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Malai Rabdi -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/t-malai-rabdi.jpg"
+                               alt="Malai Rabdi"
+                               data-default="img/product/t-malai-rabdi.jpg"
+                               data-hover="img/product/malai-rabdi-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Malai Rabdi</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Malai Sandwich -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/malai-sandwich.jpg"
+                               alt="Malai Sandwich"
+                               data-default="img/product/malai-sandwich.jpg"
+                               data-hover="img/product/malai-sandwich-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Malai Sandwich</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Pakiza -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/pakiza.jpg"
+                               alt="Pakiza"
+                               data-default="img/product/pakiza.jpg"
+                               data-hover="img/product/pakiza-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Pakiza</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Raj Bhog -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/raj-bhog.jpg"
+                               alt="Raj Bhog"
+                               data-default="img/product/raj-bhog.jpg"
+                               data-hover="img/product/raj-bhog-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Raj Bhog</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Rasgulla -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/rasgulla.jpg"
+                               alt="Rasgulla"
+                               data-default="img/product/rasgulla.jpg"
+                               data-hover="img/product/rasgulla-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Rasgulla</a></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Rasmalai -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <img class="product-image"
+                               src="img/product/rasmalai.jpg"
+                               alt="Rasmalai"
+                               data-default="img/product/rasmalai.jpg"
+                               data-hover="img/product/rasmalai-hover.jpg">
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Rasmalai</a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+
+    <footer class="ps-footer ps-footer--light">
+      <div class="ps-footer__content">
+        <div class="container">
+          <div class="ps-footer__left">
+            <form class="ps-form--footer-subscribe" action="#" method="get">
+              <h3>Get news & offer</h3>
+              <p>Sign up for our mailing list to get latest update and offers</p>
+              <div class="form-group--inside">
+                <input class="form-control" type="text" placeholder="Your email...">
+                <button><i class="fa fa-arrow-right"></i></button>
+              </div>
+              <p>* Don't worry, we never spam</p>
+            </form>
+          </div>
+          <div class="ps-footer__center">
+            <div class="ps-site-info"><a class="ps-logo" href="index-2.html"><img src="img/logo.png" alt="Jaswant Sweets"></a>
+              <p>123 Sweet Street, Connaught Place, New Delhi 110001, India</p>
+              <p>Email: <a href="mailto:info@jaswantsweets.com">info@jaswantsweets.com</a></p>
+              <p>Phone: <span class="ps-hightlight">+91 11 2345 6789</span></p>
+            </div>
+          </div>
+          <div class="ps-footer__right">
+            <aside class="widget widget_footer">
+              <h3 class="widget-title">Opening Time</h3>
+              <p>Monday - Friday:  <span>09:00 am - 09:00 pm</span></p>
+              <p>Saturday - Sunday:  <span>10:00 am - 08:00 pm</span></p>
+              <ul class="ps-list--payment-method">
+                <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-wallet"></i></a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <div class="ps-footer__bottom">
+        <div class="container">
+          <ul class="ps-list--social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+          <p>&copy; 2023 Jaswant Sweets. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <div id="back2top"><i class="pe-7s-angle-up"></i></div>
+    <div class="ps-site-overlay"></div>
+    <div id="loader-wrapper">
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <div class="ps-search" id="site-search"><a class="ps-btn--close" href="#"></a>
+      <div class="ps-search__content">
+        <form class="ps-form--primary-search" action="#" method="post">
+          <input class="form-control" type="text" placeholder="Search for sweets...">
+          <button><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <!-- Plugins-->
+    <script src="plugins/jquery-1.12.4.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="plugins/imagesloaded.pkgd.js"></script>
+    <script src="plugins/masonry.pkgd.min.js"></script>
+    <script src="plugins/isotope.pkgd.min.js"></script>
+    <script src="plugins/jquery.matchHeight-min.js"></script>
+    <script src="plugins/slick/slick/slick.min.js"></script>
+    <script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="plugins/slick-animation.min.js"></script>
+    <script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/sticky-sidebar/dist/sticky-sidebar.min.js"></script>
+    <script src="plugins/jquery.slimscroll.min.js"></script>
+    <script src="plugins/select2/dist/js/select2.full.min.js"></script>
+    <script src="plugins/gmap3.min.js"></script>
+    <!-- Custom scripts-->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Image hover effect
+            const productImages = document.querySelectorAll(".product-image");
+            productImages.forEach(img => {
+                img.addEventListener("mouseover", function() {
+                    this.src = this.dataset.hover;
+                });
+                img.addEventListener("mouseout", function() {
+                    this.src = this.dataset.default;
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
