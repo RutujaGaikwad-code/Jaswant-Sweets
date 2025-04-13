@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!-- bengali-sweets.html -->
+<!-- snacks.html -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="">
-    <meta name="keywords" content="Bengali Sweets, Rasgulla, Cham Cham, Rasmalai, Indian Sweets">
-    <meta name="description" content="Authentic Bengali Sweets from Jaswant Sweets - Premium quality traditional sweets">
-    <title>Bengali Sweets | Jaswant Sweets</title>
+    <meta name="keywords" content="Indian Snacks, Samosa, Kachori, Dhokla, Dahi Wada, Moong Bhaji, Fafda, Sabu Patis, Matar Roll, Rava Dhokla, Khandvi, Aaluwadi">
+    <meta name="description" content="Authentic Indian Snacks from Jaswant Sweets - Taste the delicious variety of Indian snacks">
+    <title>Indian Snacks | Jaswant Sweets</title>
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="plugins/bootstrap4/css/bootstrap.min.css">
@@ -24,6 +24,32 @@
     <link rel="stylesheet" href="plugins/chikery-icon/style.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Legacy Quote Styles */
+        .legacy-quote {
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            font-style: italic;
+            font-size: 18px;
+            color: #555;
+            position: relative;
+        }
+        
+        .legacy-quote:before, .legacy-quote:after {
+            content: '"';
+            font-size: 24px;
+            color: #fcb800;
+        }
+        
+        .legacy-quote:before {
+            margin-right: 10px;
+        }
+        
+        .legacy-quote:after {
+            margin-left: 10px;
+        }
+        
         /* Category Header Styles */
         .category-header {
             text-align: center;
@@ -97,6 +123,11 @@
         
         /* Responsive Adjustments */
         @media (max-width: 768px) {
+            .legacy-quote {
+                font-size: 16px;
+                padding: 15px;
+            }
+            
             .category-header h2 {
                 font-size: 22px;
                 padding: 0 15px;
@@ -133,13 +164,12 @@
                 margin: 0 8px;
             }
         }
-    </style>
-      <style>
-        /* Add these new styles */
+
+        /* Product Container Styles */
         .product-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 10px; /* Adds space on both sides */
+            padding: 0 15px;
         }
         
         .ps-product {
@@ -147,14 +177,24 @@
             text-align: center;
         }
         
-        .product-image {
-            width: 100%;
-            height: 250px; /* Fixed height */
-            object-fit: cover; /* Ensures images maintain aspect ratio */
-            border-radius: 8px;
-            transition: all 0.3s ease;
+        .product-image-container {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
         
+       
+        .product-image {
+    width: 250px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* This will crop the image to fit the dimensions */
+    border-radius: 8px; /* Optional: for rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+} 
         .ps-product__content {
             padding: 15px 0;
         }
@@ -167,30 +207,29 @@
         }
         
         /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .product-container {
-                padding: 0 20px;
-            }
-            
-            .product-image {
+        @media (max-width: 992px) {
+            .product-image-container {
+                width: 200px;
                 height: 200px;
             }
         }
         
-        @media (max-width: 576px) {
-            .product-container {
-                padding: 0 1500px;
-            }
-            
-            .product-image {
+        @media (max-width: 768px) {
+            .product-image-container {
+                width: 180px;
                 height: 180px;
             }
         }
         
-        /* Keep your existing category header and tabs styles */
+        @media (max-width: 576px) {
+            .product-image-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
-  <body>
+<body>
     <header class="header header--default header--home-4 line" data-sticky="true">
       <div class="header__left">
         <ul class="ps-list--social">
@@ -205,18 +244,12 @@
           <ul class="menu">
             <li class="menu-item-has-children"><a href="index-2.html">Home</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
               <ul class="sub-menu">
-                <li class="current-menu-item "><a href="index-2.html">Homepage 1</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a>
-                </li>
+                <li class="current-menu-item "><a href="index-2.html">Homepage 1</a></li>
+                <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a></li>
+                <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a></li>
+                <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a></li>
+                <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a></li>
+                <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a></li>
               </ul>
             </li>
             <li class="menu-item-has-children">
@@ -225,15 +258,14 @@
               <ul class="sub-menu">
                   <li><a href="sweets.html">Sweets</a></li>
                   <li><a href="namkeen.html">Namkeen</a></li>
-                  <li><a href="snacks.html">Snacks</a></li>
+                  <li class="active"><a href="snacks.html">Snacks</a></li>
                   <li><a href="diwali-faral.html">Diwali Faral</a></li>
                   <li><a href="gift-boxes.html">Gift Boxes</a></li>
                   <li><a href="snack-boxes.html">Snack Boxes</a></li>
               </ul>
           </li>
           
-            <li class="current-menu-item "><a href="about-us.html">About</a>
-            </li>
+            <li class="current-menu-item "><a href="about-us.html">About</a></li>
           </ul>
         </nav>
         <div class="header__logo"><a class="ps-logo" href="index-2.html"><img src="img/logo.png" alt="Jaswant Sweets"></a></div>
@@ -241,30 +273,21 @@
           <ul class="menu">
             <li class="menu-item-has-children"><a href="about-us.html">Pages</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
               <ul class="sub-menu">
-                <li class="current-menu-item "><a href="about-us.html">About</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-2.html">Checkout</a>
-                </li>
-                <li class="current-menu-item "><a href="whishlist.html">Whishlist</a>
-                </li>
-                <li class="current-menu-item "><a href="homepage-4.html">Compare</a>
-                </li>
+                <li class="current-menu-item "><a href="about-us.html">About</a></li>
+                <li class="current-menu-item "><a href="homepage-2.html">Checkout</a></li>
+                <li class="current-menu-item "><a href="whishlist.html">Whishlist</a></li>
+                <li class="current-menu-item "><a href="homepage-4.html">Compare</a></li>
               </ul>
             </li>
             <li class="menu-item-has-children"><a href="blog-grid.html">News</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
               <ul class="sub-menu">
-                <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a>
-                </li>
-                <li class="current-menu-item "><a href="blog-grid-fullwidth.html">Blog grid fullwidth</a>
-                </li>
-                <li class="current-menu-item "><a href="blog-list.html">Blog List</a>
-                </li>
-                <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a>
-                </li>
+                <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a></li>
+                <li class="current-menu-item "><a href="blog-grid-fullwidth.html">Blog grid fullwidth</a></li>
+                <li class="current-menu-item "><a href="blog-list.html">Blog List</a></li>
+                <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a></li>
               </ul>
             </li>
-            <li class="current-menu-item "><a href="contact-us.html">Contact</a>
-            </li>
+            <li class="current-menu-item "><a href="contact-us.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -300,56 +323,42 @@
         <ul class="menu--mobile">
           <li class="menu-item-has-children"><a href="index-2.html">Home</a><span class="sub-toggle"></span>
             <ul class="sub-menu">
-              <li class="current-menu-item "><a href="index-2.html">Homepage 1</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a>
-              </li>
+              <li class="current-menu-item "><a href="index-2.html">Homepage 1</a></li>
+              <li class="current-menu-item "><a href="homepage-2.html">Homepage 2</a></li>
+              <li class="current-menu-item "><a href="homepage-3.html">Homepage 3</a></li>
+              <li class="current-menu-item "><a href="homepage-4.html">Homepage 4</a></li>
+              <li class="current-menu-item "><a href="homepage-5.html">Homepage 5</a></li>
+              <li class="current-menu-item "><a href="homepage-6.html">Homepage 6</a></li>
             </ul>
           </li>
-         
-    <ul class="category-tabs">
-      <li class="active"><a href="sweets.html">Dry Fruit Based Sweets</a></li>
-      <li><a href="bengali_sweets.html">Bengali Sweets</a></li>
-      <li><a href="sugar_free_sweets.html">Sugar-Free Sweets</a></li>
-      <li><a href="traditional_sweets.html">Indian Traditional Sweets</a></li>
-  </ul>
-
-          <li class="current-menu-item "><a href="about-us.html">About</a>
+          <li class="menu-item-has-children"><a href="shop-default.html">Shop</a><span class="sub-toggle"></span>
+            <ul class="sub-menu">
+              <li><a href="sweets.html">Dry Fruit Sweets</a></li>
+              <li><a href="bengali_sweets.html">Bengali Sweets</a></li>
+              <li><a href="sugar-free-sweets.html">Sugar-Free Sweets</a></li>
+              <li><a href="traditional_sweets.html">Traditional Sweets</a></li>
+              <li><a href="namkeen.html">Namkeen</a></li>
+              <li class="current-menu-item"><a href="snacks.html">Snacks</a></li>
+            </ul>
           </li>
+          <li class="current-menu-item "><a href="about-us.html">About</a></li>
           <li class="menu-item-has-children"><a href="about-us.html">Pages</a><span class="sub-toggle"></span>
             <ul class="sub-menu">
-              <li class="current-menu-item "><a href="about-us.html">About</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-2.html">Checkout</a>
-              </li>
-              <li class="current-menu-item "><a href="whishlist.html">Whishlist</a>
-              </li>
-              <li class="current-menu-item "><a href="homepage-4.html">Compare</a>
-              </li>
+              <li class="current-menu-item "><a href="about-us.html">About</a></li>
+              <li class="current-menu-item "><a href="homepage-2.html">Checkout</a></li>
+              <li class="current-menu-item "><a href="whishlist.html">Whishlist</a></li>
+              <li class="current-menu-item "><a href="homepage-4.html">Compare</a></li>
             </ul>
           </li>
           <li class="menu-item-has-children"><a href="blog-grid.html">News</a><span class="sub-toggle"></span>
             <ul class="sub-menu">
-              <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a>
-              </li>
-              <li class="current-menu-item "><a href="blog-grid-full-width.html">Blog grid fullwidth</a>
-              </li>
-              <li class="current-menu-item "><a href="blog-list.html">Blog List</a>
-              </li>
-              <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a>
-              </li>
+              <li class="current-menu-item "><a href="blog-grid.html">Blog grid</a></li>
+              <li class="current-menu-item "><a href="blog-grid-fullwidth.html">Blog grid fullwidth</a></li>
+              <li class="current-menu-item "><a href="blog-list.html">Blog List</a></li>
+              <li class="current-menu-item "><a href="blog-detail.html">Blog Detail</a></li>
             </ul>
           </li>
-          <li class="current-menu-item "><a href="contact-us.html">Contact</a>
-          </li>
+          <li class="current-menu-item "><a href="contact-us.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -361,153 +370,207 @@
         <div class="ps-hero__container">
           <div class="ps-breadcrumb">
             <ul class="breadcrumb">
+                <br>
               <li><a href="index-2.html">Home</a></li>
-              <li>Sweets</li>
+              <li>Snacks</li>
             </ul>
           </div>
-          <h1 class="ps-hero__heading">Bengali Sweets</h1>
+          <h1 class="ps-hero__heading">Indian Snacks</h1>
+          
+            <!-- Legacy Quote -->
+            <div class="legacy-quote">
+                At Jaswant Sweets, our snacks are crafted with the same love and dedication as our sweets. For generations, we've been perfecting these recipes to bring you the authentic flavors of India's diverse snack culture - from crispy samosas to soft dhoklas, each bite tells a story of tradition and passion.
+            </div>
+            
         </div>
       </div>
       
-      <div class="product-container"> <!-- New container div with padding -->
-        <ul class="category-tabs">
-            <li><a href="sweets.html">Dry Fruit Based Sweets</a></li>
-            <li class="active"><a href="bengali_sweets.html">Bengali Sweets</a></li>
-            <li><a href="sugar-free-sweets.html">Sugar-Free Sweets</a></li>
-            <li><a href="traditional_sweets.html">Indian Traditional Sweets</a></li>
-        </ul>
+      <div class="product-container">
+          <!-- Legacy Quote -->
+          <div>
+                </div>
           
+        <br>
           <div class="ps-product-box five-column">
               <div class="row">
-                  <!-- Badam Kalli -->
+                  <!-- Samosa -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/badam-kalli2.jpg"
-                               alt="Badam Kalli"
-                               data-default="img/product/badam-kalli2.jpg"
-                               data-hover="img/product/badam-kalli-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/samosa.jpg"
+                                   alt="Samosa"
+                                   data-default="img/product/samosa.jpg"
+                                   data-hover="img/product/samosa-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Badam Kalli</a></div>
+                              <div><a class="ps-product__title">Samosa</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Cham Cham -->
+
+                  <!-- Kachori -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/cham-cham.jpg"
-                               alt="Cham Cham"
-                               data-default="img/product/cham-cham.jpg"
-                               data-hover="img/product/cham-cham-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/kachori.jpg"
+                                   alt="Kachori"
+                                   data-default="img/product/kachori.jpg"
+                                   data-hover="img/product/kachori-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Cham Cham</a></div>
+                              <div><a class="ps-product__title">Kachori</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Continue with other products in the same format -->
-                  <!-- China Roll -->
+
+                  <!-- Dhokla -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/china-roll.jpg"
-                               alt="China Roll"
-                               data-default="img/product/china-roll.jpg"
-                               data-hover="img/product/china-roll-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/dhokla.jpg"
+                                   alt="Dhokla"
+                                   data-default="img/product/dhokla.jpg"
+                                   data-hover="img/product/dhokla-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">China Roll</a></div>
+                              <div><a class="ps-product__title">Dhokla</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Malai Rabdi -->
+
+                  <!-- Dahi Wada -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/t-malai-rabdi.jpg"
-                               alt="Malai Rabdi"
-                               data-default="img/product/t-malai-rabdi.jpg"
-                               data-hover="img/product/malai-rabdi-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/dahi-wada.jpg"
+                                   alt="Dahi Wada"
+                                   data-default="img/product/dahi-wada.jpg"
+                                   data-hover="img/product/dahi-wada-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Malai Rabdi</a></div>
+                              <div><a class="ps-product__title">Dahi Wada</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Malai Sandwich -->
+
+                  <!-- Moong Bhaji -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/malai-sandwich.jpg"
-                               alt="Malai Sandwich"
-                               data-default="img/product/malai-sandwich.jpg"
-                               data-hover="img/product/malai-sandwich-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/moong-bhaji.jpg"
+                                   alt="Moong Bhaji"
+                                   data-default="img/product/moong-bhaji.jpg"
+                                   data-hover="img/product/moong-bhaji-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Malai Sandwich</a></div>
+                              <div><a class="ps-product__title">Moong Bhaji</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Pakiza -->
+
+                  <!-- Fafda -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/pakiza.jpg"
-                               alt="Pakiza"
-                               data-default="img/product/pakiza.jpg"
-                               data-hover="img/product/pakiza-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/fafda.jpg"
+                                   alt="Fafda"
+                                   data-default="img/product/fafda.jpg"
+                                   data-hover="img/product/fafda-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Pakiza</a></div>
+                              <div><a class="ps-product__title">Fafda</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Raj Bhog -->
+
+                  <!-- Sabu Patis -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/raj-bhog.jpg"
-                               alt="Raj Bhog"
-                               data-default="img/product/raj-bhog.jpg"
-                               data-hover="img/product/raj-bhog-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/sabu-patis.jpg"
+                                   alt="Sabu Patis"
+                                   data-default="img/product/sabu-patis.jpg"
+                                   data-hover="img/product/sabu-patis.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Raj Bhog</a></div>
+                              <div><a class="ps-product__title">Sabu Patis</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Rasgulla -->
+
+                  <!-- Matar Roll -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/rasgulla-hover.jpg"
-                               alt="Rasgulla"
-                               data-default="img/product/rasgulla-hover.jpg"
-                               data-hover="img/product/rasgulla.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/matar-roll-hover.jpg"
+                                   alt="Matar Roll"
+                                   data-default="img/product/matar-roll-hover.jpg"
+                                   data-hover="img/product/matar-roll.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Rasgulla</a></div>
+                              <div><a class="ps-product__title">Matar Roll</a></div>
                           </div>
                       </div>
                   </div>
-                  
-                  <!-- Rasmalai -->
+
+                  <!-- Rava Dhokla -->
                   <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
                       <div class="ps-product">
-                          <img class="product-image"
-                               src="img/product/rasmalai.jpg"
-                               alt="Rasmalai"
-                               data-default="img/product/rasmalai.jpg"
-                               data-hover="img/product/rasmalai-hover.jpg">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/rava-dhokla.jpg"
+                                   alt="Rava Dhokla"
+                                   data-default="img/product/rava-dhokla.jpg"
+                                   data-hover="img/product/rava-dhokla-hover.jpg">
+                          </div>
                           <div class="ps-product__content">
-                              <div><a class="ps-product__title">Rasmalai</a></div>
+                              <div><a class="ps-product__title">Rava Dhokla</a></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Khandvi -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/khandvi.jpg"
+                                   alt="Khandvi"
+                                   data-default="img/product/khandvi.jpg"
+                                   data-hover="img/product/khandvi-hover.jpg">
+                          </div>
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Khandvi</a></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Aaluwadi -->
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                      <div class="ps-product">
+                          <div class="product-image-container">
+                              <img class="product-image"
+                                   src="img/product/aaluwadi.jpg"
+                                   alt="Aaluwadi"
+                                   data-default="img/product/aaluwadi.jpg"
+                                   data-hover="img/product/aaluwadi-hover.jpg">
+                          </div>
+                          <div class="ps-product__content">
+                              <div><a class="ps-product__title">Aaluwadi</a></div>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
-      </div> 
+      </div>
 
       <footer class="ps-footer ps-footer--light" style="padding-bottom: 0;">
         <div class="ps-footer__content">
@@ -547,7 +610,7 @@
     <div class="ps-search" id="site-search"><a class="ps-btn--close" href="#"></a>
       <div class="ps-search__content">
         <form class="ps-form--primary-search" action="#" method="post">
-          <input class="form-control" type="text" placeholder="Search for sweets...">
+          <input class="form-control" type="text" placeholder="Search for snacks...">
           <button><i class="fa fa-search"></i></button>
         </form>
       </div>
@@ -577,13 +640,17 @@
             const productImages = document.querySelectorAll(".product-image");
             productImages.forEach(img => {
                 img.addEventListener("mouseover", function() {
-                    this.src = this.dataset.hover;
+                    if (this.dataset.hover) {
+                        this.src = this.dataset.hover;
+                    }
                 });
                 img.addEventListener("mouseout", function() {
-                    this.src = this.dataset.default;
+                    if (this.dataset.default) {
+                        this.src = this.dataset.default;
+                    }
                 });
             });
         });
     </script>
-  </body>
+</body>
 </html>
