@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Videos - Jaswant Sweets</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #8b0000;
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            background-color: #fff;
+            line-height: 1.8;
+        }
+        
+        .news-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .news-card {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .news-img-container {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+        
+        .news-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            flex: 0 0 55%;
+            max-width: 55%;
+            padding: 30px;
+        }
+        
+        .news-date {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+            font-style: italic;
+        }
+        
+        .news-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .news-text {
+            margin-bottom: 20px;
+        }
+        
+        .news-btn {
+            display: inline-block;
+            padding: 8px 25px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .news-btn:hover {
+            background: transparent;
+            color: var(--primary-color);
+        }
+        
+        .video-section {
+            padding: 40px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .video-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .video-card {
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (max-width: 992px) {
+            .news-img-container,
+            .news-content {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .video-card {
+                flex: 0 0 calc(50% - 15px);
+                max-width: calc(50% - 15px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .video-card {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .news-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Shop News & Events</h2>
+            
+            <!-- News 1 -->
+            <div class="news-card">
+                <div class="news-img-container">
+                    <img src="https://www.jaswantsweets.com/images/temp/97.jpg" alt="New Branch Opening" class="news-img">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">Oct 10, 2023</span>
+                    <h3 class="news-title">New Branch Opening in Rajarampuri</h3>
+                    <p class="news-text">We're excited to announce our second location opening on November 15th! The new shop will feature a "Sweet Making Viewing Gallery" where you can watch our chefs prepare traditional sweets using century-old techniques.</p>
+                    <p><strong>Address:</strong> Shop No. 12, Patwardhan Complex, Rajarampuri, Kolhapur</p>
+                    <a href="https://www.facebook.com/JaswantSweets/photos/jaswant-sweets-rajarampuri-kolhapur/2173981386152671/" class="news-btn">
+                        View Details <i class="fas fa-chevron-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- News 2 -->
+            <div class="news-card">
+                <div class="news-img-container">
+                    <img src="https://5.imimg.com/data5/XX/IY/MY-2/selection_278-250x250.png" alt="Award Ceremony" class="news-img">
+                </div>
+                <div class="news-content">
+                    <span class="news-date">Sep 5, 2023</span>
+                    <h3 class="news-title">Best Traditional Sweet Shop 2023</h3>
+                    <p class="news-text">Jaswant Sweets wins Maharashtra's prestigious "Parampara Puraskar" for preserving authentic Kolhapuri sweet-making techniques in the modern age. This award recognizes our commitment to maintaining traditional recipes while ensuring consistent quality.</p>
+                    <a href="https://www.instagram.com/jaswantsweets/?hl=en" class="news-btn">
+                        See Award <i class="fas fa-trophy ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+<section class="video-section">
+    <div class="container">
+        <h3 class="video-title">Sweet Making Videos</h3>
+        
+        <!-- First Row of Videos -->
+        <div class="video-container">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/uIZzVl-wAXM" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/mMan1aT3Yvk" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/3KhExA1zKzk" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row of Videos -->
+        <div class="video-container">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/q-Ox8SzUcfQ" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/4aW0t_9wTmA" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/LiPNIm00CJo" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

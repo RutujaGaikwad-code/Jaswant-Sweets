@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Kaju Katli, Kolhapur sweets, cashew sweets, traditional Indian sweets, Jaswant Sweets, best Kaju Katli in Kolhapur">
+    <meta name="description" content="Discover what makes Jaswant Sweets' Kaju Katli unique - our minimalist sugar approach lets the natural cashew flavor shine through in every perfect slice">
+    <title>What Makes Our Kaju Katli Unique? | Jaswant Sweets Kolhapur</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #8b0000; /* Deep red */
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .blog-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/blog/kaju_katli1.jpg');
+    background-size: contain; /* Changed from cover to contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Fallback color */
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* For larger screens where contain might leave empty space */
+@media (min-width: 992px) {
+    .blog-hero {
+        background-size: cover; /* Switch to cover on larger screens */
+        background-attachment: fixed; /* Optional parallax effect */
+    }
+}
+
+/* Ensure content stays centered and readable */
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4); /* Slightly darker overlay for better text contrast */
+    border-radius: 5px;
+}
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .recipe-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .recipe-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .ingredients-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>What Makes Our Kaju Katli Unique?</h1>
+            <p class="lead">Discover our minimalist sugar approach that lets the natural cashew flavor shine through in every perfect slice</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">April 22, 2025</span>
+            <!-- <span class="blog-author">By Chef Rajesh Jaswant</span> -->
+        </div>
+        
+        <p>At Jaswant Sweets, our Kaju Katli isn't just another sweet - it's a masterpiece of minimalism. While most sweet shops drown their cashew slices in sugar, we take a different approach that highlights the natural richness of premium cashews, creating a treat that's as sophisticated as it is delicious.</p>
+<!--         
+        <div class="blog-image">
+            <img src="img/blog/kaju_katli.jpg" alt="Jaswant Sweets' Kaju Katli close-up">
+            <figcaption>Our signature Kaju Katli - thin, perfectly textured slices with edible silver leaf</figcaption>
+        </div>
+         -->
+        <h2>The Jaswant Difference</h2>
+        <p>What makes our Kaju Katli special is our commitment to letting the cashew be the star. Our recipe uses 40% less sugar than traditional versions, allowing the natural sweetness and buttery texture of the cashews to take center stage.</p>
+        
+        <div class="highlight-box">
+            <p>"True Kaju Katli should taste like cashews first and sweet second. That's why we use only the highest grade cashews and just enough sugar to bind them." - Late Shri Jaswant Rao, Founder</p>
+        </div>
+        
+        <h3>Key Ingredients That Matter</h3>
+        <ul class="ingredients-list">
+            <li><strong>Premium Cashews:</strong> We source only whole, unbroken cashew nuts from select farms</li>
+            <li><strong>Minimal Sugar:</strong> Just enough to bind, never to overwhelm</li>
+            <li><strong>Pure Ghee:</strong> A touch for richness and aroma</li>
+            <li><strong>Edible Silver Leaf:</strong> For that traditional festive touch</li>
+            <li><strong>Natural Cardamom:</strong> Freshly ground for subtle fragrance</li>
+        </ul>
+        
+        <h2>Our Meticulous Preparation Process</h2>
+        <p>Creating perfect Kaju Katli requires precision at every step:</p>
+        
+        <div class="recipe-steps">
+            <div class="recipe-step">
+                <h3>Cashew Selection & Soaking</h3>
+                <p>Each batch begins with hand-selected whole cashews that are soaked just long enough to soften without losing their natural oils. This careful hydration is key to achieving our signature smooth texture.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Fine Grinding</h3>
+                <p>The soaked cashews are ground to an ultra-fine paste using traditional stone grinders. This slow process prevents overheating that can affect flavor and texture.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Precise Cooking</h3>
+                <p>The cashew paste is cooked with our minimal sugar syrup in copper kadhai, allowing even heat distribution. Our chefs know exactly when to stop - the moment the mixture leaves the sides but before it dries out.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Perfect Rolling</h3>
+                <p>The cooked dough is rolled to exactly 3mm thickness - thin enough to melt in your mouth but thick enough to satisfy. Each sheet is then cut into perfect diamonds by hand.</p>
+            </div>
+        </div>
+        
+        <!-- <div class="blog-image">
+            <img src="../img/blog/kaju_katli_prep.jpg" alt="Chef preparing Kaju Katli at Jaswant Sweets">
+            <figcaption>Our master chef rolling Kaju Katli dough to perfect thickness</figcaption>
+        </div>
+         -->
+        <h2>Why Our Kaju Katli Stands Out</h2>
+        <p>Here's what makes Jaswant Sweets' Kaju Katli exceptional:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Natural Flavor First</h4>
+                <p>You taste cashews first, sweetness second - unlike commercial versions where sugar dominates.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Perfect Texture</h4>
+                <p>Not too soft, not too firm - just the right bite that melts smoothly on your tongue.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Healthier Choice</h4>
+                <p>With 40% less sugar than traditional recipes, it's a relatively guilt-free indulgence.</p>
+            </div>
+        </div>
+        
+        <h2>Serving & Storage Tips</h2>
+        <p>To enjoy our Kaju Katli at its best:</p>
+        
+        <ul class="ingredients-list">
+            <li><strong>Serve at room temperature:</strong> Flavors are most pronounced when not chilled</li>
+            <li><strong>Pair with masala chai:</strong> The spices complement the cashew flavor beautifully</li>
+            <li><strong>Store in airtight container:</strong> Keeps fresh for up to 2 weeks</li>
+            <li><strong>Layer with parchment paper:</strong> Prevents sticking without refrigeration</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h3>Pro Tip from Our Chef</h3>
+            <p>"For special occasions, stack two pieces of Kaju Katli with a thin layer of saffron-infused rabdi in between - it creates an exquisite dessert that impresses every time."</p>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">You Might Also Like</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gulab_jamun.jpg" alt="Gulab Jamun">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">The Secret Behind Our Perfect Gulab Jamun</h3>
+                            <p class="related-post-excerpt">Discover why Jaswant Sweets' Gulab Jamun has been Kolhapur's favorite for generations.</p>
+                            <a href="gulab-jamun-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Healthy Mithai? Yes!</h3>
+                            <p class="related-post-excerpt">Explore our range of diabetic-friendly sweets made with natural sweeteners that let you indulge without guilt.</p>
+                            <a href="sugar-free-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+
+
+
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="img/blog/gift-box.jpg" alt="Gift and Snack Boxes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Celebrations Made Sweeter: Jaswant’s Gift & Snack Boxes</h3>
+                            <p class="related-post-excerpt">Perfect for every occasion, Jaswant Sweets' beautifully curated gift and snack boxes bring together tradition, taste, and thoughtful packaging in one delightful bundle.</p>
+                            <a href="gift-snack-box-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

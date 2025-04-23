@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Jaswant Sweets history, Kolhapur sweets, traditional mithai, Maharashtrian sweets, iconic sweet shop">
+    <meta name="description" content="Discover how Jaswant Sweets has become a household name by carrying forward Kolhapur's iconic mithai heritage with unmatched quality, tradition, and taste">
+    <title>Jaswant Sweets: A Sweet Chapter in Kolhapur's Legacy | Traditional Mithai Since 1975</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #8b0000; /* Deep red */
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .blog-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/blog/sweet-legacy2.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .blog-hero {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .timeline {
+            counter-reset: timeline-counter;
+            margin: 40px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            counter-increment: timeline-counter;
+            content: counter(timeline-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .values-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .values-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .values-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Jaswant Sweets: A Sweet Chapter in Kolhapur's Legacy</h1>
+            <p class="lead">Discover how we've become a household name by carrying forward Kolhapur's iconic mithai heritage</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">April 24, 2025</span>
+        </div>
+        
+        <p>For nearly five decades, Jaswant Sweets has been more than just a sweet shop - it's been a custodian of Kolhapur's rich culinary heritage. What began as a modest storefront in 1975 has blossomed into an institution, weaving itself into the fabric of Maharashtra's sweet traditions and becoming synonymous with quality mithai.</p>
+        
+        <h2>Our Humble Beginnings</h2>
+        <p>The story of Jaswant Sweets is one of passion meeting perseverance. Founded by Late Shri Jaswant Rao with just three recipes and a dream, our shop quickly earned recognition for its uncompromising quality and authentic flavors.</p>
+        
+        <div class="highlight-box">
+            <p>"We never set out to be the biggest, only to be the best. Every sweet should tell a story of tradition, craftsmanship and love." - Late Shri Jaswant Rao, Founder</p>
+        </div>
+        
+        <h3>Core Values That Define Us</h3>
+        <ul class="values-list">
+            <li><strong>Tradition First:</strong> Preserving authentic recipes without shortcuts</li>
+            <li><strong>Quality Ingredients:</strong> Sourcing the finest dairy, nuts and spices</li>
+            <li><strong>Artisan Craft:</strong> Maintaining handcrafted techniques</li>
+            <li><strong>Consistency:</strong> Delivering the same taste for generations</li>
+            <li><strong>Community:</strong> Growing with Kolhapur's families</li>
+        </ul>
+        
+        <h2>Our Journey Through The Decades</h2>
+        <p>From our first location near Rajaram Mandir to becoming Kolhapur's preferred sweet destination, our timeline tells a sweet story:</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>The Foundation (1975)</h3>
+                <p>Established with just three signature sweets - Kaju Katli, Gulab Jamun and Basundi. Our original shop could serve only 10 customers at a time but quickly gained popularity for its exceptional quality.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>First Expansion (1985)</h3>
+                <p>Moved to our current location near Shahaji Law College, introducing our now-famous Diwali Faral boxes and wedding sweet collections that became instant hits.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Generational Shift (2000)</h3>
+                <p>The second generation joined the business, bringing modern management while fiercely protecting traditional recipes. Introduced our corporate gifting line.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>Present Day</h3>
+                <p>Now serving over 500 customers daily with 50+ varieties of sweets and snacks, while still preparing everything in-house using the same traditional methods.</p>
+            </div>
+        </div>
+        
+        <h2>What Makes Our Sweets Special</h2>
+        <p>Here's why generations of Kolhapur families choose Jaswant Sweets:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Time-Tested Recipes</h4>
+                <p>We've resisted modernization that compromises taste, keeping our formulations unchanged for decades.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Local Ingredients</h4>
+                <p>From Kolhapur's dairy to Maharashtra's finest nuts and spices, we source locally where possible.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Artisan Approach</h4>
+                <p>Many sweets are still hand-shaped by our master mithai makers, some with us for over 30 years.</p>
+            </div>
+        </div>
+        
+        <h2>Our Role in Kolhapur's Celebrations</h2>
+        <p>Jaswant Sweets has become integral to the city's special moments:</p>
+        
+        <ul class="values-list">
+            <li><strong>Festivals:</strong> Our Diwali and Ganesh Chaturthi specials are now part of family traditions</li>
+            <li><strong>Weddings:</strong> Three generations have served sweets at Kolhapur's grandest weddings</li>
+            <li><strong>Corporate Gifting:</strong> The preferred choice for local businesses during festivals</li>
+            <li><strong>Everyday Joy:</strong> From birthdays to promotions, we sweeten life's small victories</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h3>Customer Memories</h3>
+            <p>"My grandfather brought me here as a child, now I bring my grandchildren. The Modak still tastes exactly as I remember - that's the magic of Jaswant Sweets." - Mrs. Patil, Loyal Customer Since 1982</p>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">Explore Our Sweet Legacy</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gulab_jamun.jpg" alt="Gulab Jamun">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">The Secret Behind Our Perfect Gulab Jamun</h3>
+                            <p class="related-post-excerpt">Discover why our Gulab Jamun has been Kolhapur's favorite for generations.</p>
+                            <a href="gulab-jamun-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">What Makes Our Kaju Katli Unique?</h3>
+                            <p class="related-post-excerpt">Our minimalist sugar approach lets the natural cashew flavor shine through.</p>
+                            <a href="kaju-katli-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gift-box.jpg" alt="Gift Boxes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Celebrations Made Sweeter</h3>
+                            <p class="related-post-excerpt">Our beautifully curated gift boxes bring tradition and taste together.</p>
+                            <a href="gift-boxes-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Diwali faral, Maharashtrian snacks, traditional Diwali sweets, Chakli, Shankarpali, Karanji, Diwali gift hampers">
+    <meta name="description" content="Discover Jaswant Sweets' authentic Diwali Faral Collection - traditional Maharashtrian snacks made with time-honored recipes for the festival of lights">
+    <title>Celebrate Diwali with Jaswant Sweets' Faral Collection | Traditional Festival Snacks</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #8b0000;
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .blog-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/blog/diwali_faral1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .faral-items {
+            margin: 40px 0;
+        }
+        
+        .faral-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--light-bg);
+            border-radius: 5px;
+        }
+        
+        .faral-item h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        
+        .faral-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .values-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .values-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .values-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Celebrate Diwali with Jaswant Sweets' Faral Collection</h1>
+            <p class="lead">Traditional Maharashtrian snacks crafted with generations of culinary wisdom</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">January 20, 2024</span>
+        </div>
+        
+        <p>Diwali in Maharashtra is synonymous with the tradition of Faral - an exquisite assortment of sweet and savory snacks that bring families together. At Jaswant Sweets, we've perfected these traditional recipes over three generations, offering Kolhapur's most authentic Diwali Faral collection.</p>
+        
+        <div class="highlight-box">
+            <p>"The crackle of fresh Chakli, the delicate sweetness of Shankarpali, the aromatic filling of Karanji - these are the flavors that make a Maharashtrian Diwali truly special."</p>
+        </div>
+        
+        <h2>Our Signature Faral Selection</h2>
+        
+        <div class="faral-items">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="faral-item">
+                        <img src="../img/blog/chakli.jpg" alt="Golden Chakli">
+                        <h3>Golden Chakli</h3>
+                        <p>Our spiral-shaped savory delights are made from a perfect blend of rice flour, gram flour and aromatic spices. Each batch is fried in pure ghee to achieve that signature golden hue and satisfying crunch.</p>
+                        <p><strong>Specialty:</strong> Enhanced with roasted cumin and sesame seeds for extra flavor</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="faral-item">
+                        <img src="../img/blog/shankarpali.jpg" alt="Diamond Shankarpali">
+                        <h3>Diamond Shankarpali</h3>
+                        <p>These diamond-cut sweet morsels strike the perfect balance between crispy and melt-in-mouth. Made with premium wheat flour, pure ghee and topped with delicate sugar crystals.</p>
+                        <p><strong>Specialty:</strong> Our secret recipe ensures they stay fresh for weeks</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="faral-item">
+                        <img src="../img/blog/karanji.jpg" alt="Crescent Karanji">
+                        <h3>Crescent Karanji</h3>
+                        <p>Half-moon shaped pockets of crisp pastry filled with sweetened coconut, nuts and cardamom. Each piece is hand-crimped by our experienced chefs for that perfect traditional look.</p>
+                        <p><strong>Specialty:</strong> Filling made with freshly grated coconut and jaggery</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="faral-item">
+                        <img src="../img/blog/diwali_ladoo.jpg" alt="Festive Ladoos">
+                        <h3>Festive Ladoo Varieties</h3>
+                        <p>From besan to motichoor, our Diwali special ladoos are prepared with extra care using premium ingredients. Each ladoo is hand-rolled to perfection.</p>
+                        <p><strong>Specialty:</strong> Made with aromatic spices and pure ghee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Why Our Faral Stands Apart</h2>
+        
+        <ul class="values-list">
+            <li><strong>Generational Recipes:</strong> Unchanged formulas passed down since 1975</li>
+            <li><strong>Daily Fresh Preparation:</strong> Made in small batches throughout Diwali season</li>
+            <li><strong>Premium Ingredients:</strong> Locally sourced flours, pure ghee and fresh spices</li>
+            <li><strong>Artisan Techniques:</strong> Many items still hand-shaped by master chefs</li>
+            <li><strong>Authentic Taste:</strong> Preserving the true flavors of Maharashtra</li>
+        </ul>
+        
+        <h2>Perfect Faral Gifting Options</h2>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="faral-item">
+                    <h3><i class="fas fa-gift text-primary"></i> Traditional Faral Box</h3>
+                    <p>Classic assortment of Chakli, Shankarpali and Karanji in beautiful festive packaging</p>
+                    <p><strong>Perfect for:</strong> Family gifts, neighbors</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="faral-item">
+                    <h3><i class="fas fa-gift text-primary"></i> Premium Faral Hamper</h3>
+                    <p>Luxury selection including dry fruits, premium sweets and savory items in elegant packaging</p>
+                    <p><strong>Perfect for:</strong> Corporate gifting, special clients</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="faral-item">
+                    <h3><i class="fas fa-gift text-primary"></i> Custom Faral Creation</h3>
+                    <p>Build your own box with your favorite faral items and personalized message</p>
+                    <p><strong>Perfect for:</strong> Personalized Diwali wishes</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <h3>Pro Tip for Faral Storage</h3>
+            <p>"Store your faral in airtight containers with a piece of blotting paper at the bottom to absorb any excess oil. Keep in a cool, dry place away from direct sunlight to maintain freshness throughout the festive season."</p>
+        </div>
+        
+        <h2>The Cultural Significance of Faral</h2>
+        
+        <p>In Maharashtrian culture, Diwali faral represents:</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="faral-item">
+                    <h3><i class="fas fa-heart text-primary"></i> Family Bonding</h3>
+                    <p>The preparation and sharing of faral brings generations together, creating cherished memories</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="faral-item">
+                    <h3><i class="fas fa-hands-helping text-primary"></i> Community Sharing</h3>
+                    <p>Exchanging faral with neighbors and friends strengthens community ties during Diwali</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">More Diwali Specials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="img/blog/sugar_free.jpg"alt="Diwali Sweets">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Diwali Mithai Collection</h3>
+                            <p class="related-post-excerpt">Explore our special sweets crafted exclusively for Diwali celebrations</p>
+                            <a href="diwali-sweets.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gift-box.jpg" alt="Gift Boxes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Festive Gift Solutions</h3>
+                            <p class="related-post-excerpt">Discover our beautifully packaged Diwali gift options</p>
+                            <a href="diwali-gifts.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Our Signature Kaju Katli</h3>
+                            <p class="related-post-excerpt">Learn what makes our Kaju Katli a Diwali favorite</p>
+                            <a href="kaju-katli.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
