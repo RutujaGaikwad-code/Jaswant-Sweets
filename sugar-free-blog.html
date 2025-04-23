@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="sugar-free sweets, diabetic-friendly mithai, healthy Indian sweets, natural sweeteners, guilt-free desserts">
+    <meta name="description" content="Discover Jaswant Sweets' sugar-free collection - delicious diabetic-friendly sweets made with natural ingredients that let you indulge without guilt">
+    <title>Healthy Mithai? Yes! | Jaswant Sweets' Sugar-Free Collection</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #2E7D32; /* Dark green */
+            --text-color: #333;
+            --light-bg: #f0f9f1;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .blog-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/blog/sugar_free_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .recipe-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .recipe-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .ingredients-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Healthy Mithai? Yes!</h1>
+            <p class="lead">Jaswant Sweets' Sugar-Free Collection - Indulge Without Guilt</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">May 15, 2025</span>
+        </div>
+        
+        <p>At Jaswant Sweets, we believe everyone deserves to enjoy traditional Indian sweets, regardless of dietary restrictions. Our sugar-free collection has been carefully crafted to deliver authentic flavors using natural sweeteners and premium ingredients, making them perfect for diabetics and health-conscious sweet lovers alike.</p>
+        
+        <div class="highlight-box">
+            <p>"Our sugar-free sweets aren't just about removing sugar - they're about recreating the complete mithai experience with natural alternatives that are kind to your body without compromising on taste." - Chef Priya Jaswant</p>
+        </div>
+        
+        <h2>Our Natural Sweetener Philosophy</h2>
+        <p>Unlike many commercial sugar-free sweets that use artificial sweeteners, we rely on nature's bounty to sweeten our creations:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="blog-image">
+                    <img src="../img/blog/stevia.jpg" alt="Stevia leaves">
+                    <figcaption>Stevia - Our primary natural sweetener</figcaption>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-image">
+                    <img src="../img/blog/dates.jpg" alt="Dates">
+                    <figcaption>Date paste for rich texture</figcaption>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-image">
+                    <img src="../img/blog/jaggery.jpg" alt="Jaggery">
+                    <figcaption>Low-GI jaggery in moderation</figcaption>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Why Our Sugar-Free Sweets Stand Out</h3>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h4>Diabetic-Friendly</h4>
+                <p>Low glycemic index options that won't spike blood sugar levels</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h4>100% Natural</h4>
+                <p>No artificial sweeteners, colors or preservatives</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Authentic Taste</h4>
+                <p>Traditional recipes adapted with care to maintain original flavors</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h4>Premium Ingredients</h4>
+                <p>Only the finest nuts, dairy and natural sweeteners</p>
+            </div>
+        </div>
+        
+        <h2>Our Signature Sugar-Free Collection</h2>
+
+<div class="recipe-steps">
+    <div class="recipe-step">
+        <h3>1. Sugar-Free Malai Barfi</h3>
+        <p>Creamy, rich malai barfi made with low-fat milk solids and naturally sweetened with erythritol. A guilt-free indulgence with every bite.</p>
+        <div class="blog-image">
+            <img src="img/product/malai-barfi-hover.jpg" alt="Sugar-Free Malai Barfi">
+        </div>
+    </div>
+
+    <div class="recipe-step">
+        <h3>2. Sugar-Free Ladoo</h3>
+        <p>Traditional ladoo flavor recreated with a sugar-free twist using natural dates and nuts. A power-packed sweet ideal for health-conscious snackers.</p>
+        <div class="blog-image">
+            <img src="img/product/sugar-free-ladoo-hover.jpg" alt="Sugar-Free Ladoo">
+        </div>
+    </div>
+
+   
+    <div class="recipe-step">
+        <h3>3. Sugar-Free Gulab Jamun</h3>
+        <p>Classic Indian dessert reinvented! Soft jamuns soaked in a stevia-sweetened syrup that offers indulgence without the sugar spike.</p>
+        <div class="blog-image">
+            <img src="img/blog/gulabjamun.jpg" alt="Sugar-Free Gulab Jamun">
+        </div>
+    </div>
+</div>
+
+        
+        <h2>Nutritional Benefits</h2>
+        <p>Our sugar-free sweets aren't just about what they lack (refined sugar), but what they provide:</p>
+        
+        <ul class="ingredients-list">
+            <li><strong>High in Protein:</strong> Nuts and dairy provide essential amino acids</li>
+            <li><strong>Rich in Fiber:</strong> Helps regulate digestion and blood sugar</li>
+            <li><strong>Healthy Fats:</strong> From nuts and pure ghee for sustained energy</li>
+            <li><strong>Antioxidants:</strong> From natural ingredients like cardamom and nuts</li>
+            <li><strong>Essential Minerals:</strong> Calcium, magnesium and zinc from dairy and nuts</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h3>Customer Testimonial</h3>
+            <p>"As someone with type 2 diabetes, I thought I had to give up mithai forever. Jaswant Sweets' sugar-free collection has brought joy back to my festivals and celebrations without affecting my blood sugar levels." - Rajesh Patil, Kolhapur (customer since 2020)</p>
+        </div>
+        
+        <h2>Perfect For Every Occasion</h2>
+        <p>Our sugar-free sweets are ideal for:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-gift"></i> Festivals</h4>
+                <p>Celebrate Diwali, Rakhi and other festivals without compromising health</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-birthday-cake"></i> Special Occasions</h4>
+                <p>Birthdays, anniversaries and family gatherings</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-heart"></i> Daily Indulgence</h4>
+                <p>For those moments when you crave something sweet but want to stay healthy</p>
+            </div>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">Explore Our Sweet Legacy</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gulab_jamun.jpg" alt="Gulab Jamun">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">The Secret Behind Our Perfect Gulab Jamun</h3>
+                            <p class="related-post-excerpt">Discover why our Gulab Jamun has been Kolhapur's favorite for generations.</p>
+                            <a href="gulab-jamun-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">What Makes Our Kaju Katli Unique?</h3>
+                            <p class="related-post-excerpt">Our minimalist sugar approach lets the natural cashew flavor shine through.</p>
+                            <a href="kaju-katli-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/gift-box.jpg" alt="Gift Boxes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Celebrations Made Sweeter</h3>
+                            <p class="related-post-excerpt">Our beautifully curated gift boxes bring tradition and taste together.</p>
+                            <a href="gift-snack-box-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="sweet gift boxes, festival gifts, Indian sweets hamper, corporate gifts, wedding favors, traditional mithai boxes">
+    <meta name="description" content="Celebrate every occasion with Jaswant Sweets' beautifully curated gift boxes - a perfect blend of tradition, taste and thoughtful packaging">
+    <title>Celebrations Made Sweeter: Jaswant's Gift & Snack Boxes | Jaswant Sweets Kolhapur</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #8b0000; /* Deep red */
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .blog-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/blog/gift-box1.jpg');
+    background-size: contain; /* Changed from cover to contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Fallback color */
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* For larger screens where contain might leave empty space */
+@media (min-width: 992px) {
+    .blog-hero {
+        background-size: cover; /* Switch to cover on larger screens */
+        background-attachment: fixed; /* Optional parallax effect */
+    }
+}
+
+/* Ensure content stays centered and readable */
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4); /* Slightly darker overlay for better text contrast */
+    border-radius: 5px;
+}
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .recipe-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .recipe-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .ingredients-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        /* Custom styles for gift boxes */
+        .gift-box {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .gift-box:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .gift-box h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .gift-box ul {
+            padding-left: 20px;
+        }
+        
+        .occasion-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Celebrations Made Sweeter</h1>
+            <p class="lead">Jaswant's beautifully curated gift & snack boxes bring tradition, taste and thoughtful packaging together</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">April 23, 2025</span>
+            <!-- <span class="blog-author">By Chef Rajesh Jaswant</span> -->
+        </div>
+        
+        <p>At Jaswant Sweets, we believe every celebration deserves something special. Our handcrafted gift and snack boxes are more than just sweets - they're carefully curated experiences that bring joy to every occasion. Whether it's a festival, wedding, corporate event, or just because, our boxes carry the warmth of tradition in every bite.</p>
+<!--         
+        <div class="blog-image">
+            <img src="img/blog/gift_boxes.jpg" alt="Assortment of Jaswant Sweets gift boxes">
+            <figcaption>Our signature gift boxes - perfect for any occasion</figcaption>
+        </div>
+         -->
+        <h2>Why Choose Jaswant Gift Boxes?</h2>
+        <p>In a world of mass-produced gifts, we stand apart with our thoughtful approach to gifting:</p>
+        
+        <div class="highlight-box">
+            <p>"A gift should delight both the giver and receiver. That's why we put equal care into what goes inside our boxes and how they're presented." - Late Shri Jaswant Rao, Founder</p>
+        </div>
+        
+        <h3>What Makes Our Gift Boxes Special</h3>
+        <ul class="ingredients-list">
+            <li><strong>Handpicked Combinations:</strong> Each box is thoughtfully assembled by our experts</li>
+            <li><strong>Premium Packaging:</strong> Traditional yet elegant designs that reflect our heritage</li>
+            <li><strong>Freshness Guaranteed:</strong> Prepared only after order confirmation</li>
+            <li><strong>Customizable:</strong> Tailor contents to your specific needs</li>
+            <li><strong>Eco-Friendly:</strong> Sustainable materials wherever possible</li>
+        </ul>
+        
+        <h2>Our Signature Collections</h2>
+        <p>We offer a range of beautifully crafted boxes for every occasion and budget:</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="gift-box">
+                    <h3>Festival Favorites</h3>
+                    <p>A celebration of seasonal specialties perfect for Diwali, Rakhi, Ganesh Chaturthi and other festivals.</p>
+                    <p><strong>Contents may include:</strong></p>
+                    <ul>
+                        <li>Seasonal special mithai</li>
+                        <li>Traditional savory snacks</li>
+                        <li>Festive dry fruits</li>
+                        <li>Custom greeting card</li>
+                    </ul>
+                    <div>
+                        <span class="occasion-badge">Diwali</span>
+                        <span class="occasion-badge">Raksha Bandhan</span>
+                        <span class="occasion-badge">Ganesh Chaturthi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="gift-box">
+                    <h3>Wedding Wonders</h3>
+                    <p>Elegant boxes that make perfect wedding favors or pre-wedding gifts for guests.</p>
+                    <p><strong>Contents may include:</strong></p>
+                    <ul>
+                        <li>Premium dry fruit sweets</li>
+                        <li>Silver-coated delicacies</li>
+                        <li>Customized packaging</li>
+                        <li>Personalized message</li>
+                    </ul>
+                    <div>
+                        <span class="occasion-badge">Wedding Favors</span>
+                        <span class="occasion-badge">Engagement</span>
+                        <span class="occasion-badge">Reception</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="gift-box">
+                    <h3>Corporate Classics</h3>
+                    <p>Sophisticated gifts that make lasting impressions on clients and employees.</p>
+                    <p><strong>Contents may include:</strong></p>
+                    <ul>
+                        <li>Assorted premium sweets</li>
+                        <li>Gourmet snacks</li>
+                        <li>Branded packaging</li>
+                        <li>Custom logo options</li>
+                    </ul>
+                    <div>
+                        <span class="occasion-badge">Corporate Gifting</span>
+                        <span class="occasion-badge">New Year</span>
+                        <span class="occasion-badge">Client Gifts</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="gift-box">
+                    <h3>Everyday Delights</h3>
+                    <p>Because celebrations don't need special occasions - perfect for birthdays, anniversaries or just because.</p>
+                    <p><strong>Contents may include:</strong></p>
+                    <ul>
+                        <li>Customer's choice of sweets</li>
+                        <li>Seasonal specials</li>
+                        <li>Personalized notes</li>
+                        <li>Surprise additions</li>
+                    </ul>
+                    <div>
+                        <span class="occasion-badge">Birthday</span>
+                        <span class="occasion-badge">Anniversary</span>
+                        <span class="occasion-badge">Thank You</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Our Customization Process</h2>
+        <p>Creating your perfect gift box is simple with our personalized approach:</p>
+        
+        <div class="recipe-steps">
+            <div class="recipe-step">
+                <h3>Consultation</h3>
+                <p>Share your occasion, budget and preferences with our gift specialists (in-store or via phone/email).</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Selection</h3>
+                <p>Choose from our range of sweets, snacks and packaging options to create your ideal combination.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Personalization</h3>
+                <p>Add custom messages, logos or special requests to make it uniquely yours.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Delivery</h3>
+                <p>We carefully prepare and deliver your gifts fresh - locally or nationwide.</p>
+            </div>
+        </div>
+        
+        <h2>What Our Customers Say</h2>
+        <p>Here's why people love gifting Jaswant Sweet boxes:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Memorable Impressions</h4>
+                <p>"Our clients still talk about the beautiful Diwali boxes we sent last year!" - Local Business Owner</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Authentic Taste</h4>
+                <p>"Finally found gift boxes where the packaging matches the quality inside!" - Regular Customer</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-check-circle text-primary"></i> Stress-Free Gifting</h4>
+                <p>"Made my sister's wedding favors so easy - just ordered and forgot!" - Wedding Planner</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <h3>Pro Tip from Our Team</h3>
+            <p>"Order your festival gift boxes at least 2 weeks in advance to ensure availability and avoid rush charges. For weddings, we recommend finalizing orders 3 months ahead for large quantities."</p>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+   <!-- Related Posts Section -->
+<section class="related-posts">
+    <div class="container">
+        <h2 class="text-center mb-5">You Might Also Like</h2>
+        <div class="row">
+            
+            
+           
+            
+            <div class="col-md-4">
+                <div class="related-post-card">
+                    <img src="../img/blog/diwali_faral.jpg" alt="Diwali Faral">
+                    <div class="related-post-content">
+                        <p class="blog-date">January 20, 2024</p>
+                        <h3 class="related-post-title">Celebrate Diwali with Jaswant Sweets' Faral Collection</h3>
+                        <p class="related-post-excerpt">Delight in our handpicked selection of traditional Diwali Faral, including Chakli, Shankarpali, and Karanji, perfect for gifting or sharing with loved ones during the festival of lights.</p>
+                        <a href="diwali-faral-blog.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="related-post-card">
+                    <img src="../img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                    <div class="related-post-content">
+                        <p class="blog-date">April 5, 2025</p>
+                        <h3 class="related-post-title">Healthy Mithai? Yes! Jaswant Sweets' Sugar-Free Collection</h3>
+                        <p class="related-post-excerpt">Explore our range of diabetic-friendly sweets made with natural sweeteners that let you indulge without guilt. Perfect for health-conscious sweet lovers.</p>
+                        <a href="sugar-free-blog.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="related-post-card">
+                    <img src="../img/blog/modak.jpg" alt="Modak">
+                    <div class="related-post-content">
+                        <p class="blog-date">August 25, 2024</p>
+                        <h3 class="related-post-title">Celebrate Ganesh Chaturthi with Jaswant Sweets' Divine Modak</h3>
+                        <p class="related-post-excerpt">Discover our authentic Ukadiche Modak, Lord Ganesha's favorite sweet, made with traditional recipes passed down through generations in our family.</p>
+                        <a href="modak-blog.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
