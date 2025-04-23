@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Gift Boxes - Dry Fruits, Sweets, Corporate & Snack Boxes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --secondary: #333;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #a52a2a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            display: inline-block;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary);
+            z-index: 0;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .product-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #c19b2e;
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+            padding: 60px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+        }
+        
+        /* Snack Box Section */
+        .snack-box {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .snack-box .container {
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .snack-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .snack-box p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .social-icons {
+            margin-bottom: 30px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Premium Gift Boxes</h1>
+            <p>Delight your loved ones with our exquisite collection of gift boxes - perfect for every occasion. Handcrafted with love and filled with premium quality products.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Gift Collections</h2>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Dry Fruit Box -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dry Fruit Gift Box">
+                </div>
+                <div class="product-content">
+                    <h3>Dry Fruit Gift Box</h3>
+                    <p>A luxurious assortment of premium dry fruits including almonds, cashews, walnuts, pistachios, and more. Perfect for health-conscious loved ones.</p>
+                    <div class="product-price">Starting from ₹599</div>
+                    <a href="#" class="btn">Customize Now</a>
+                </div>
+            </div>
+            
+            <!-- Corporate Gifting -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Corporate Gift Box">
+                </div>
+                <div class="product-content">
+                    <h3>Corporate Gift Box</h3>
+                    <p>Impress your clients and employees with our premium corporate gift boxes. Customizable with your logo and message for a professional touch.</p>
+                    <div class="product-price">Starting from ₹899</div>
+                    <a href="#" class="btn">Enquire Now</a>
+                </div>
+            </div>
+            
+            <!-- Sweet Box -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sweet Gift Box">
+                </div>
+                <div class="product-content">
+                    <h3>Sweet Gift Box</h3>
+                    <p>Traditional and fusion sweets beautifully packed in elegant boxes. Choose from our wide variety of regional specialties and modern creations.</p>
+                    <div class="product-price">Starting from ₹499</div>
+                    <a href="#" class="btn">View Options</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Snack Box Section -->
+    <section class="snack-box">
+        <div class="container">
+            <h2>Snacks Box</h2>
+            <p>The common problem suffered by all of us in the evening is the ever increasing growl of our tummies. But worst of all, it is the answer to it - what food to eat?</p>
+            <p>Due to the ever increasing demand for healthy, nutritious food, people have started turning to fruits and green leafy vegetables for their diet. But hello! There are people like you and me, who just do not care about calories and what we want is tasty, mouthwatering, yummy food!</p>
+            <p>We honestly understand the cravings of your taste buds, and hence, just to pamper them, we have come up with the service of a snacks box that includes snacks of your choice. All you need to do is to select from a variety of options, and let us know your preferences. Your snack box will be customized on the basis of your requirements!</p>
+            <p>Drop in an order with us and unravel the secrets to splendid food. For us, customer is the king and we rightly value his choices. We understand the importance and the value of luscious, appetizing and delectable food in your diet. Come to us, and we promise to you quality food, as well as hospitable service.</p>
+            <a href="#" class="btn">Build Your Snack Box</a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Gift Boxes?</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>We source only the finest ingredients and materials to ensure your gift makes a lasting impression.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Customizable</h3>
+                    <p>Personalize your gift box with custom messages, logos, or by selecting your preferred items.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We ensure timely delivery across the country with careful packaging to preserve freshness.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Thoughtful Packaging</h3>
+                    <p>Each box is carefully designed and packed to create an unforgettable unboxing experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The corporate gift boxes were a huge hit with our clients! The premium packaging and quality products made us look really good.
+                    </div>
+                    <div class="testimonial-author">- Rakhi Mehta</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Ordered the dry fruit box for Diwali gifts. The presentation was exquisite and the fruits were so fresh. Will definitely order again!
+                    </div>
+                    <div class="testimonial-author">- Priya Sharma</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Our office snacks subscription has been a game changer. The variety and quality are excellent, and our team looks forward to it every week.
+                    </div>
+                    <div class="testimonial-author">- Anil Gupta, HR Manager</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action
+    <section style="background-color: var(--primary); padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Impress?</h2>
+            <p style="color: white; font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Whether it's for corporate gifting, festive celebrations, or just to satisfy those snack cravings, we've got you covered with our premium collections.
+            </p>
+            <a href="#" class="btn" style="background-color: white; color: var(--primary);">Contact Us Today</a>
+        </div>
+    </section> -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Gift Boxes</a>
+                <a href="#">Corporate Gifting</a>
+                <a href="#">Snack Boxes</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Premium Gift Boxes. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
