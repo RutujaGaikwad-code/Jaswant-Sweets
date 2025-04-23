@@ -7,9 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="Jaswant Sweets">
-    <meta name="keywords" content="Jaswant Sweets history, Kolhapur sweets, traditional mithai, Maharashtrian sweets, iconic sweet shop">
-    <meta name="description" content="Discover how Jaswant Sweets has become a household name by carrying forward Kolhapur's iconic mithai heritage with unmatched quality, tradition, and taste">
-    <title>Jaswant Sweets: A Sweet Chapter in Kolhapur's Legacy | Traditional Mithai Since 1975</title>
+    <meta name="keywords" content="Modak, Ukadiche Modak, Ganesh Chaturthi, traditional Indian sweets, Jaswant Sweets, Kolhapur sweets">
+    <meta name="description" content="Discover Jaswant Sweets' authentic Ukadiche Modak - Lord Ganesha's favorite sweet made with traditional recipes passed down through generations">
+    <title>Celebrate Ganesh Chaturthi with Jaswant Sweets' Divine Modak | Kolhapur</title>
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
@@ -64,11 +64,11 @@
             width: 100%;
         }
         .blog-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/blog/jaswant_legacy.jpg');
-    background-size: contain;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/blog/modak.jpg');
+    background-size: contain; /* Changed from cover to contain */
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Fallback color */
     height: 60vh;
     min-height: 400px;
     display: flex;
@@ -80,18 +80,20 @@
     position: relative;
 }
 
+/* For larger screens where contain might leave empty space */
 @media (min-width: 992px) {
     .blog-hero {
-        background-size: cover;
-        background-attachment: fixed;
+        background-size: cover; /* Switch to cover on larger screens */
+        background-attachment: fixed; /* Optional parallax effect */
     }
 }
 
+/* Ensure content stays centered and readable */
 .blog-hero .container {
     position: relative;
     z-index: 2;
     padding: 20px;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4); /* Slightly darker overlay for better text contrast */
     border-radius: 5px;
 }
         
@@ -161,20 +163,20 @@
             margin: 40px 0;
         }
         
-        .timeline {
-            counter-reset: timeline-counter;
+        .recipe-steps {
+            counter-reset: step-counter;
             margin: 40px 0;
         }
         
-        .timeline-item {
+        .recipe-step {
             position: relative;
             padding-left: 60px;
             margin-bottom: 30px;
         }
         
-        .timeline-item:before {
-            counter-increment: timeline-counter;
-            content: counter(timeline-counter);
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
             position: absolute;
             left: 0;
             top: 0;
@@ -189,19 +191,19 @@
             font-weight: bold;
         }
         
-        .values-list {
+        .ingredients-list {
             list-style-type: none;
             padding: 0;
         }
         
-        .values-list li {
+        .ingredients-list li {
             padding: 8px 0;
             border-bottom: 1px dashed #ddd;
             position: relative;
             padding-left: 30px;
         }
         
-        .values-list li:before {
+        .ingredients-list li:before {
             content: "\f00c";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -355,7 +357,7 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <!-- <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="index.html">
@@ -385,97 +387,129 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <!-- Blog Hero Section -->
     <section class="blog-hero">
         <div class="container">
-            <h1>Jaswant Sweets: A Sweet Chapter in Kolhapur's Legacy</h1>
-            <p class="lead">Discover how we've become a household name by carrying forward Kolhapur's iconic mithai heritage</p>
+            <h1>Celebrate Ganesh Chaturthi with Jaswant Sweets' Divine Modak</h1>
+            <p class="lead">Discover our authentic Ukadiche Modak, Lord Ganesha's favorite sweet, made with traditional recipes passed down through generations</p>
         </div>
     </section>
 
     <!-- Blog Content Section -->
     <article class="blog-content">
         <div class="blog-meta">
-            <span class="blog-date">April 24, 2025</span>
+            <span class="blog-date">August 25, 2024</span>
+            <!-- <span class="blog-author">By Chef Rajesh Jaswant</span> -->
         </div>
         
-        <p>For nearly five decades, Jaswant Sweets has been more than just a sweet shop - it's been a custodian of Kolhapur's rich culinary heritage. What began as a modest storefront in 1975 has blossomed into an institution, weaving itself into the fabric of Maharashtra's sweet traditions and becoming synonymous with quality mithai.</p>
-        
-        <h2>Our Humble Beginnings</h2>
-        <p>The story of Jaswant Sweets is one of passion meeting perseverance. Founded by Late Shri Jaswant Rao with just three recipes and a dream, our shop quickly earned recognition for its uncompromising quality and authentic flavors.</p>
+        <p>At Jaswant Sweets, the preparation of Modak for Ganesh Chaturthi is not just a culinary process - it's a sacred ritual. Our Ukadiche Modak (steamed Modak) carries the blessings of three generations of sweet makers who have perfected this divine offering to Lord Ganesha.</p>
         
         <div class="highlight-box">
-            <p>"We never set out to be the biggest, only to be the best. Every sweet should tell a story of tradition, craftsmanship and love." - Late Shri Jaswant Rao, Founder</p>
+            <p>"Modak is not just a sweet - it's prasadam. Every fold in the Modak's pleats carries our devotion, and every ingredient is selected with the same care we would use for offerings in a temple." - Late Shri Jaswant Rao, Founder</p>
         </div>
         
-        <h3>Core Values That Define Us</h3>
-        <ul class="values-list">
-            <li><strong>Tradition First:</strong> Preserving authentic recipes without shortcuts</li>
-            <li><strong>Quality Ingredients:</strong> Sourcing the finest dairy, nuts and spices</li>
-            <li><strong>Artisan Craft:</strong> Maintaining handcrafted techniques</li>
-            <li><strong>Consistency:</strong> Delivering the same taste for generations</li>
-            <li><strong>Community:</strong> Growing with Kolhapur's families</li>
+        <h2>The Significance of Modak in Ganesh Chaturthi</h2>
+        <p>According to Hindu mythology, Modak is Lord Ganesha's favorite sweet. The shape of Modak symbolizes the universe, with the outer covering representing the material world and the sweet filling representing spiritual bliss. At Jaswant Sweets, we honor this tradition by:</p>
+        
+        <ul class="ingredients-list">
+            <li>Preparing Modak only after morning prayers during Ganesh Chaturthi</li>
+            <li>Using only the freshest ingredients sourced from trusted local suppliers</li>
+            <li>Maintaining strict hygiene standards as befits a divine offering</li>
+            <li>Preparing small batches throughout the day to ensure freshness</li>
         </ul>
         
-        <h2>Our Journey Through The Decades</h2>
-        <p>From our first location near Rajaram Mandir to becoming Kolhapur's preferred sweet destination, our timeline tells a sweet story:</p>
+        <h2>Our Traditional Modak Recipe</h2>
+        <p>What makes our Ukadiche Modak special is the perfect balance between the soft, delicate outer covering and the rich, flavorful filling:</p>
         
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>The Foundation (1975)</h3>
-                <p>Established with just three signature sweets - Kaju Katli, Gulab Jamun and Basundi. Our original shop could serve only 10 customers at a time but quickly gained popularity for its exceptional quality.</p>
+        <h3>Key Ingredients</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>For the Outer Covering:</h4>
+                <ul class="ingredients-list">
+                    <li>Freshly stone-ground rice flour</li>
+                    <li>Pure ghee</li>
+                    <li>Rock salt</li>
+                    <li>Water from Tuljapur's holy well</li>
+                </ul>
             </div>
-            
-            <div class="timeline-item">
-                <h3>First Expansion (1985)</h3>
-                <p>Moved to our current location near Shahaji Law College, introducing our now-famous Diwali Faral boxes and wedding sweet collections that became instant hits.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <h3>Generational Shift (2000)</h3>
-                <p>The second generation joined the business, bringing modern management while fiercely protecting traditional recipes. Introduced our corporate gifting line.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <h3>Present Day</h3>
-                <p>Now serving over 500 customers daily with 50+ varieties of sweets and snacks, while still preparing everything in-house using the same traditional methods.</p>
+            <div class="col-md-6">
+                <h4>For the Filling:</h4>
+                <ul class="ingredients-list">
+                    <li>Freshly grated coconut from Konkan</li>
+                    <li>Organic jaggery from local sugarcane</li>
+                    <li>Cardamom powder from Kerala</li>
+                    <li>Nutmeg (just a pinch for aroma)</li>
+                </ul>
             </div>
         </div>
         
-        <h2>What Makes Our Sweets Special</h2>
-        <p>Here's why generations of Kolhapur families choose Jaswant Sweets:</p>
+        <h2>The Art of Modak Making</h2>
+        <p>Creating the perfect Modak requires skill passed down through generations. Here's how we make ours:</p>
+        
+        <div class="recipe-steps">
+            <div class="recipe-step">
+                <h3>Preparing the Dough</h3>
+                <p>The rice flour is carefully roasted in ghee to remove raw flavor, then mixed with hot water to form a smooth, pliable dough. The temperature of the water is crucial - too hot and the dough becomes sticky, too cool and it cracks when shaped.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Making the Filling</h3>
+                <p>Fresh coconut is grated and cooked with jaggery until the mixture thickens. We add cardamom and nutmeg at just the right moment to preserve their delicate aromas. The filling must be moist but not runny.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Shaping the Modak</h3>
+                <p>This is where years of practice show. A portion of dough is shaped into a cup, the filling is added, and then the edges are carefully pleated to form the characteristic Modak shape with exactly 21 folds - considered auspicious.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Steaming to Perfection</h3>
+                <p>The Modaks are steamed for exactly 12 minutes in muslin-lined steamers. This gentle cooking preserves the delicate texture while ensuring the dough is cooked through.</p>
+            </div>
+        </div>
+        
+        <h2>Types of Modak We Offer</h2>
+        <p>While Ukadiche Modak is traditional, we offer several varieties to suit different tastes:</p>
         
         <div class="row">
             <div class="col-md-4">
-                <h4><i class="fas fa-check-circle text-primary"></i> Time-Tested Recipes</h4>
-                <p>We've resisted modernization that compromises taste, keeping our formulations unchanged for decades.</p>
+                <h4><i class="fas fa-star text-primary"></i> Traditional Ukadiche Modak</h4>
+                <p>The classic steamed version with coconut-jaggery filling, just as Lord Ganesha prefers it.</p>
             </div>
             <div class="col-md-4">
-                <h4><i class="fas fa-check-circle text-primary"></i> Local Ingredients</h4>
-                <p>From Kolhapur's dairy to Maharashtra's finest nuts and spices, we source locally where possible.</p>
+                <h4><i class="fas fa-star text-primary"></i> Fried Modak</h4>
+                <p>A crispier version with the same delicious filling, perfect for those who enjoy texture contrast.</p>
             </div>
             <div class="col-md-4">
-                <h4><i class="fas fa-check-circle text-primary"></i> Artisan Approach</h4>
-                <p>Many sweets are still hand-shaped by our master mithai makers, some with us for over 30 years.</p>
+                <h4><i class="fas fa-star text-primary"></i> Chocolate Modak</h4>
+                <p>A modern twist with cocoa-infused outer layer and chocolate-coconut filling, popular with children.</p>
             </div>
         </div>
         
-        <h2>Our Role in Kolhapur's Celebrations</h2>
-        <p>Jaswant Sweets has become integral to the city's special moments:</p>
-        
-        <ul class="values-list">
-            <li><strong>Festivals:</strong> Our Diwali and Ganesh Chaturthi specials are now part of family traditions</li>
-            <li><strong>Weddings:</strong> Three generations have served sweets at Kolhapur's grandest weddings</li>
-            <li><strong>Corporate Gifting:</strong> The preferred choice for local businesses during festivals</li>
-            <li><strong>Everyday Joy:</strong> From birthdays to promotions, we sweeten life's small victories</li>
-        </ul>
+        <h2>Why Choose Jaswant Sweets' Modak?</h2>
+        <p>In Kolhapur, many sweet shops offer Modak during Ganesh Chaturthi, but here's why ours stand out:</p>
         
         <div class="highlight-box">
-            <h3>Customer Memories</h3>
-            <p>"My grandfather brought me here as a child, now I bring my grandchildren. The Modak still tastes exactly as I remember - that's the magic of Jaswant Sweets." - Mrs. Patil, Loyal Customer Since 1982</p>
+            <ul class="ingredients-list">
+                <li><strong>Authentic Taste:</strong> We don't cut corners - our recipes remain unchanged for generations</li>
+                <li><strong>Freshness Guarantee:</strong> We make Modak in small batches throughout the day</li>
+                <li><strong>Artisan Craftsmanship:</strong> Each Modak is shaped by hand by our experienced chefs</li>
+                <li><strong>Purity:</strong> No artificial colors, flavors, or preservatives - just as tradition dictates</li>
+            </ul>
         </div>
+        
+        <h2>Serving and Storage Tips</h2>
+        <p>To enjoy our Modak at their best:</p>
+        
+        <ul class="ingredients-list">
+            <li>Serve Ukadiche Modak warm for the best texture and aroma</li>
+            <li>Fried Modak can be served at room temperature</li>
+            <li>Store in an airtight container in the refrigerator for up to 3 days</li>
+            <li>Reheat steamed Modak by steaming for 2-3 minutes (not in microwave)</li>
+            <li>Best consumed within 24 hours of purchase for optimal taste</li>
+        </ul>
         
         <div class="social-share">
             <span>Share this article:</span>
@@ -489,44 +523,44 @@
     <!-- Related Posts Section -->
     <section class="related-posts">
         <div class="container">
-            <h2 class="text-center mb-5">Explore Our Sweet Legacy</h2>
+            <h2 class="text-center mb-5">You Might Also Like</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="related-post-card">
                         <img src="../img/blog/gulab_jamun.jpg" alt="Gulab Jamun">
                         <div class="related-post-content">
                             <h3 class="related-post-title">The Secret Behind Our Perfect Gulab Jamun</h3>
-                            <p class="related-post-excerpt">Discover why our Gulab Jamun has been Kolhapur's favorite for generations.</p>
+                            <p class="related-post-excerpt">Discover why Jaswant Sweets' Gulab Jamun has been Kolhapur's favorite for generations.</p>
                             <a href="gulab-jamun-blog.html" class="read-more">Read More</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="related-post-card">
-                        <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
-                        <div class="related-post-content">
-                            <h3 class="related-post-title">What Makes Our Kaju Katli Unique?</h3>
-                            <p class="related-post-excerpt">Our minimalist sugar approach lets the natural cashew flavor shine through.</p>
-                            <a href="kaju-katli-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="related-post-card">
-                        <img src="../img/blog/gift_boxes.jpg" alt="Gift Boxes">
-                        <div class="related-post-content">
-                            <h3 class="related-post-title">Celebrations Made Sweeter</h3>
-                            <p class="related-post-excerpt">Our beautifully curated gift boxes bring tradition and taste together.</p>
-                            <a href="gift-boxes-blog.html" class="read-more">Read More</a>
-                        </div>
+            <div class="col-md-4">
+                <div class="related-post-card">
+                    <img src="../img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                    <div class="related-post-content">
+                        <h3 class="related-post-title">Healthy Mithai? Yes!</h3>
+                        <p class="related-post-excerpt">Explore our range of diabetic-friendly sweets made with natural sweeteners
+                            that let you indulge without guilt.</p>
+                        <a href="sugar-free-blog.html" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+            
+            <div class="col-md-4">
+                <div class="related-post-card">
+                    <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                    <div class="related-post-content">
+                        <h3 class="related-post-title">Our Signature Kaju Katli</h3>
+                        <p class="related-post-excerpt">Learn what makes our Kaju Katli a Diwali favorite</p>
+                        <a href="kaju-katli.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
@@ -556,7 +590,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; 2023 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+                <p>&copy; 2024 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

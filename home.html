@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Jaswant Sweets, Kolhapur sweets, traditional Indian sweets, bakery items">
+    <meta name="description" content="Jaswant Sweets - Authentic Kolhapuri sweets and snacks since 1975">
+    <title>Jaswant Sweets | Traditional Indian Sweets & Snacks</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/slick/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom CSS for fixed blog sizes */
+        .ps-post {
+            height: 500px;
+            /* Fixed height for all blog cards */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ps-post__thumbnail {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .ps-post__thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ps-post__content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ps-post__excerpt {
+            flex: 1;
+        }
+
+        /* Category icons styling */
+        .ps-block--special--cake .ps-block__icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header header--default" data-sticky="true">
+    
+        <div class="header__center">
+          <nav class="header__navigation left">
+            <ul class="menu">
+              <li class="current-menu-item menu-item-has-children"><a href="home.html">Home</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+              </li>
+              <li class="menu-item-has-children"><a href="sweets.html">Products</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                <ul class="sub-menu">
+                  <li><a href="sweets.html">Sweets</a></li>
+                      <li><a href="namkeen.html">Namkeen</a></li>
+                      <li><a href="snacks.html">Snacks</a></li>
+                      <li><a href="diwali-faral.html">Diwali Faral</a></li>
+                      <li><a href="gift.html">Gift Boxes</a></li>
+                      <!-- <li><a href="snack-boxes.html">Snack Boxes</a></li> -->
+                  
+                </ul>
+              </li>
+              <li><a href="about-us.html">About Us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__logo"><a class="ps-logo" href="home.html"><img src="img/Jaswant_old_logo.png" alt=""></a></div>
+          <nav class="header__navigation right">
+            <ul class="menu">
+              <li class="current-menu-item menu-item-has-children"><a href="gift.html">Corporate Gifting</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+               
+              <li class="menu-item-has-children"><a href="blog.html">News</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                <ul class="sub-menu">
+                  <li><a href="news.html">News</a>
+                  </li>
+                  <li><a href="blog.html">Blog</a>
+                  </li>
+                  
+                </ul>
+              </li>
+              <li><a href="contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+      
+      </header>
+      <header class="header header--mobile" data-sticky="false">
+        <div class="header__content">
+          <div class="header__left">
+            <a class="ps-toggle--sidebar" href="#navigation-mobile"><i class="fa fa-bars"></i></a>
+          </div>
+          <div class="header__center">
+            <a class="ps-logo" href="#"><img src="img/Jaswant_old_logo.png" alt=""></a>
+          </div>
+          <div class="header__right">
+            <div class="header__actions"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+          </div>
+        </div>
+      </header>
+    </body>
+    <br>
+    <br>
+    <!-- Homepage Content -->
+    <div id="homepage-2">
+        <!-- Banner Slider -->
+        <div class="ps-home-banner bg--cover" data-background="img/bg/home-2/home-banner.jpg">
+            <div class="ps-carousel--nav owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000"
+                data-owl-gap="0" data-owl-nav="true" data-owl-dots="false" data-owl-item="1" data-owl-item-xs="1"
+                data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000"
+                data-owl-mousedrag="off">
+  
+                <div class="ps-product--banner">
+                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="samosa.png"
+                                alt="Samosa"></a></div>
+                    <div class="ps-product__content">
+                        <h4>FEATURED PRODUCT</h4>
+                        <a class="ps-product__title" href="product-default.html">Samosa<br>Mint Chutney</a>
+                    </div>
+                </div>
+                <div class="ps-product--banner">
+                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="kaju katli.png"
+                                alt="Kaju Katli"></a></div>
+                    <div class="ps-product__content">
+                        <h4>FEATURED PRODUCT</h4>
+                        <a class="ps-product__title" href="product-default.html">Kaju Katli<br>Rose Flavour</a>
+                    </div>
+                </div>
+                <div class="ps-product--banner">
+                    <div class="ps-product__thumbnail"><a href="product-default.html"><img src="Bakarwadi.png"
+                                alt="Bakarwadi"></a></div>
+                    <div class="ps-product__content">
+                        <h4>FEATURED PRODUCT</h4>
+                        <a class="ps-product__title" href="product-default.html">Bakarwadi<br>Crispy Layers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Categories -->
+        <div class="ps-section ps-home-special-categories bg--cover" data-background="img/bg/home-2/special-cake.png">
+            <div class="container">
+                <div class="ps-section__header">
+                    <p>Main products</p>
+                    <h3>Our Special Categories</h3>
+                    <i class="chikery-tt3"></i>
+                    <small>Enjoy sweets and snacks made with age-old recipes and the finest ingredients,<br>Experience
+                        rich, homemade flavors in every bite.</small>
+                </div>
+                <div class="ps-section__content">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="ps-block--special--cake">
+                                <div class="ps-block__icon">
+                                    <img src="img/categories/namkeen-icon.jpg" alt="Namkeen"
+                                        style="width: 100px; height: 90px; object-fit: contain;">
+                                </div>
+                                <div class="ps-block__content">
+                                    <h4><a href="namkeen.html">Namkeens</a></h4>
+                                    <p>Crispy, spicy, and full of flavor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="ps-block--special--cake">
+                                <div class="ps-block__icon">
+                                    <img src="img/categories/diwali-icon.jpg" alt="Diwali Faral"
+                                        style="width: 100px; height: 100px; object-fit: contain;">
+                                </div>
+                                <div class="ps-block__content">
+                                    <h4><a href="diwali-faral.html">Diwali Faral</a></h4>
+                                    <p>A festive collection of sweets and snacks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="ps-block--special--cake">
+                                <div class="ps-block__icon">
+                                    <img src="img/categories/sweet-icon.png" alt="Sweets"
+                                        style="width: 100px; height: 100px; object-fit: contain;">
+                                </div>
+                                <div class="ps-block__content">
+                                    <h4><a href="sweets.html">Sweets</a></h4>
+                                    <p>Sweetness that melts in your mouth</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="ps-block--special--cake">
+                                <div class="ps-block__icon">
+                                    <img src="img/categories/snacks-icon.png" alt="Snacks"
+                                        style="width: 100px; height: 100px; object-fit: contain;">
+                                </div>
+                                <div class="ps-block__content">
+                                    <h4><a href="snacks.html">Snacks</a></h4>
+                                    <p>Tasty, crunchy snacks perfect for tea-time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-section__footer text-center"><a class="ps-btn ps-btn--outline" href="sweets.html">All
+                        Products</a></div>
+            </div>
+        </div>
+        
+        <style>
+            /* Additional CSS for perfect image alignment */
+            .ps-block--special--cake {
+                text-align: center;
+                padding: 20px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .ps-block__icon {
+                margin-bottom: 15px;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 50%;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+        
+            .ps-block__icon img {
+                max-width: 100%;
+                max-height: 100%;
+                transition: transform 0.3s ease;
+            }
+        
+            .ps-block--special--cake:hover .ps-block__icon img {
+                transform: scale(1.1);
+            }
+        
+            .ps-block__content h4 {
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        
+            .ps-block__content p {
+                font-size: 14px;
+                color: #666;
+            }
+        </style>
+        <!-- Awards Section -->
+        <div class="ps-section ps-home-awards bg--cover" data-background="img/About_Award_Bg_image.jpeg">
+            <div class="container">
+                <div class="ps-section__header text-center">
+                    <p>Sweets Shop</p>
+                    <h3>Our Awards</h3>
+                    <i class="chikery-tt3"></i>
+                </div>
+                <div class="ps-section__content row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+                        <div class="ps-block--award text-center">
+                            <div class="ps-block__header">
+                                <img src="img/arch-of-excellence-awar-new-delhi-02.jpg" alt="Arch of Excellence Award"
+                                    class="img-fluid" style="max-width: 100%; height: auto;">
+                                <h4 class="mt-3">
+                                    Arch of Excellence Award by All India Achievers' Conference, New Delhi
+                                </h4>
+                            </div>
+                            <div class="ps-block__content">
+                                <p>
+                                    As we work to deliver Performance with Purpose, we are proud that All India
+                                    Achiever's Conference recognized our progress and achievements and honored us with a
+                                    prestigious "Arch of Excellence" award.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div class="ps-section ps-home-blog">
+            <div class="container">
+                <div class="ps-section__header">
+                    <p>Blog & News</p>
+                    <h3>From Our Kitchen</h3>
+                    <i class="chikery-tt3"></i>
+                </div>
+                <div class="ps-section__content">
+                    <div class="row">
+                        <!-- Gulab Jamun Blog -->
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                            <div class="ps-post">
+                                <div class="ps-post__thumbnail">
+                                    <img src="img/blog/gulab_jamun.jpg" alt="Gulab Jamun">
+                                    <a class="ps-post__overlay" href="gulab-jamun-blog.html"></a>
+                                </div>
+                                <div class="ps-post__content">
+                                    <p class="ps-post__meta">April 21, 2025</p>
+                                    <a class="ps-post__title" href="gulab-jamun-blog.html">The Secret Behind Our Perfect
+                                        Gulab Jamun</a>
+                                    <p class="ps-post__excerpt">Discover why Jaswant Sweets' Gulab Jamun has been
+                                        Kolhapur's favorite for generations with its melt-in-mouth texture.</p>
+                                    <a class="ps-post__morelink" href="gulab-jamun-blog.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaju Katli Blog -->
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                            <div class="ps-post">
+                                <div class="ps-post__thumbnail">
+                                    <img src="img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                                    <a class="ps-post__overlay" href="kaju-katli-blog.html"></a>
+                                </div>
+                                <div class="ps-post__content">
+                                    <p class="ps-post__meta">March 15, 2025</p>
+                                    <a class="ps-post__title" href="kaju-katli-blog.html">What Makes Our Kaju Katli
+                                        Unique?</a>
+                                    <p class="ps-post__excerpt">Discover our minimalist sugar approach that lets the
+                                        natural cashew flavor shine through in every slice.</p>
+                                    <a class="ps-post__morelink" href="kaju-katli-blog.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sugar Free Sweets Blog -->
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                            <div class="ps-post">
+                                <div class="ps-post__thumbnail">
+                                    <img src="img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                                    <a class="ps-post__overlay" href="sugar-free-blog.html"></a>
+                                </div>
+                                <div class="ps-post__content">
+                                    <p class="ps-post__meta">May 10, 2025</p>
+                                    <a class="ps-post__title" href="sugar-free-blog.html">Healthy Mithai? Yes!</a>
+                                    <p class="ps-post__excerpt">Explore our range of diabetic-friendly sweets made with
+                                        natural sweeteners that let you indulge without guilt.</p>
+                                    <a class="ps-post__morelink" href="sugar-free-blog.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-section__footer"><a class="ps-btn ps-btn--outline" href="blog.html">View More</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ps-footer ps-footer--light" style="padding-bottom: 0;">
+        <div class="ps-footer__content">
+            <div class="container"
+                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;">
+                <div class="ps-footer__center" style="width: 100%;">
+                    <div class="ps-site-info">
+                        <a class="ps-logo" href="index.html">
+                            <img src="logoJaswant.png" alt="Jaswant Sweets" style="margin: 0 auto;">
+                        </a>
+                        <p style="margin-top: 10px;">Shop No. 32, Shahaji Law College Complex, Opp. Appa's Complex,
+                            Rajarampuri Main Road, Kolhapur.</p>
+                        <p>Email: info@jaswantsweets.com</p>
+                        <p>Phone: 0231-2529877</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ps-footer__bottom" style="margin-top: 10px;">
+            <div class="container" style="text-align: center;">
+                <ul class="ps-list--social" style="display: inline-flex; gap: 10px; padding-left: 0; list-style: none;">
+                    <li><a href="https://www.facebook.com/JaswantSweets/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="https://www.instagram.com/jaswantsweets"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div id="back2top"><i class="fas fa-angle-up"></i></div>
+    <div class="ps-site-overlay"></div>
+
+    <!-- Plugins -->
+    <script src="plugins/jquery-1.12.4.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick/slick.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Owl Carousel
+        $(document).ready(function () {
+            $(".owl-slider").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                nav: true,
+                dots: false
+            });
+        });
+    </script>
+</body>
+
+</html>

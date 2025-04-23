@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Jaswant Sweets, traditional recipes, Kolhapur sweets, family secrets, Indian mithai, heritage sweets">
+    <meta name="description" content="Discover the carefully guarded family recipes of Jaswant Sweets that have preserved the authentic taste of Kolhapur's sweets for generations">
+    <title>Preserving Tradition: The Jaswant Family Recipes | Kolhapur's Heritage Sweets</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #8b0000; /* Deep red */
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .blog-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/blog/family_recipes.jpg');
+    background-size: contain; /* Changed from cover to contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Fallback color */
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* For larger screens where contain might leave empty space */
+@media (min-width: 992px) {
+    .blog-hero {
+        background-size: cover; /* Switch to cover on larger screens */
+        background-attachment: fixed; /* Optional parallax effect */
+    }
+}
+
+/* Ensure content stays centered and readable */
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4); /* Slightly darker overlay for better text contrast */
+    border-radius: 5px;
+}
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .recipe-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .recipe-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .ingredients-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+            right: -10px;
+            top: 20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            left: -10px;
+            top: 20px;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .timeline:before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:after,
+            .timeline-item:nth-child(even) .timeline-content:after {
+                left: 61px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <!-- <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Preserving Tradition: The Jaswant Family Recipes</h1>
+            <p class="lead">A glimpse into our family's secret recipes that have been carefully preserved and passed down through generations</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">October 12, 2024</span>
+            <!-- <span class="blog-author">By Chef Rajesh Jaswant</span> -->
+        </div>
+        
+        <p>For over four decades, Jaswant Sweets has been more than just a sweet shop - it's been the custodian of Kolhapur's culinary heritage. Our family recipes, carefully guarded and perfected through generations, represent not just flavors but memories, traditions, and the very essence of our culture.</p>
+        
+        <div class="highlight-box">
+            <p>"In our family, recipes aren't written in books but in hearts. Each measurement is a feeling, each technique a story, and each ingredient a carefully chosen character in our sweet symphony." - Late Shri Jaswant Rao, Founder</p>
+        </div>
+        
+        <h2>The Legacy Begins: 1975</h2>
+        <p>Our journey began in a small kitchen in Kolhapur where Shri Jaswant Rao, a passionate sweet maker, started crafting traditional Maharashtrian sweets using recipes passed down from his ancestors. What began as a humble endeavor soon became Kolhapur's most beloved sweet shop because of:</p>
+        
+        <ul class="ingredients-list">
+            <li>Uncompromising commitment to quality ingredients</li>
+            <li>Refusal to take shortcuts in preparation</li>
+            <li>Deep respect for traditional techniques</li>
+            <li>Personal attention to every batch</li>
+        </ul>
+        
+        <h2>Our Recipe Preservation Philosophy</h2>
+        <p>In an age of mass production and instant gratification, we remain steadfast in our traditional methods:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-mortar-pestle text-primary"></i> Handcrafted</h4>
+                <p>Every sweet is made by hand, following the same motions our ancestors used decades ago.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-clock text-primary"></i> Time-Honored</h4>
+                <p>We never rush the process - whether it's simmering milk for khoya or resting dough.</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-seedling text-primary"></i> Seasonal</h4>
+                <p>We adjust recipes slightly based on seasonal variations in ingredients for consistent quality.</p>
+            </div>
+        </div>
+        
+        <h2>The Family Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1975</div>
+                    <h3>The Humble Beginning</h3>
+                    <p>Shri Jaswant Rao opens a small sweet shop in Kolhapur with just 5 recipes from his grandmother, focusing on perfecting each one before adding more.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1988</div>
+                    <h3>The Golden Recipe Book</h3>
+                    <p>After years of resistance, Jaswant Rao finally writes down the family recipes in a handwritten book (kept under lock and key to this day) to preserve them accurately.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1995</div>
+                    <h3>Second Generation Takes Over</h3>
+                    <p>Rajesh Jaswant joins the business after completing his education, bringing modern management while fiercely protecting traditional methods.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2010</div>
+                    <h3>The Expansion</h3>
+                    <p>Despite growth, the family maintains small-batch production in separate kitchen sections for each sweet to preserve individual attention.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Present</div>
+                    <h3>Third Generation Training</h3>
+                    <p>The grandchildren now learn the recipes, starting with basic techniques and working up to the most complex over years of training.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Secret Ingredients of Our Success</h2>
+        <p>While we can't reveal all our secrets, here are some principles that guide our recipe preservation:</p>
+        
+        <div class="recipe-steps">
+            <div class="recipe-step">
+                <h3>Ingredient Sourcing</h3>
+                <p>We maintain relationships with the same local farmers and suppliers for decades to ensure consistent quality. Our jaggery comes from the same sugarcane fields, our milk from the same dairy since 1975.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Technique Over Technology</h3>
+                <p>While we use modern equipment for basic tasks, the crucial steps are always done traditionally - kneading by hand, slow cooking in copper vessels, and judging doneness by smell and texture.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>The Apprenticeship Model</h3>
+                <p>New chefs spend years learning just one sweet before moving to another, ensuring complete mastery. Our head chef has been with us for 28 years and knows just three recipes perfectly.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>Seasonal Adjustments</h3>
+                <p>We subtly adjust recipes based on humidity, temperature, and ingredient quality that day - knowledge passed down through generations but impossible to document.</p>
+            </div>
+        </div>
+        
+        <h2>Signature Recipes We're Proud Of</h2>
+        <p>While all our sweets follow traditional recipes, these are particularly special to our family:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4>Bhavnagri Ghee Laddu</h4>
+                    <p>Made exactly as Jaswant Rao's grandmother taught him, with a secret ratio of besan to ghee that creates the perfect melt-in-mouth texture.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4>Puran Poli</h4>
+                    <p>Our version uses a special chana dal variety grown locally and a dough technique that keeps it soft for days.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4>Kesar Peda</h4>
+                    <p>Infused with saffron from a particular Kashmir farm we've sourced from for 30 years, with a cooking method that preserves its delicate flavor.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Passing the Torch</h2>
+        <p>As we prepare the third generation to take over, our recipe preservation has become more systematic while staying true to tradition:</p>
+        
+        <ul class="ingredients-list">
+            <li><strong>Digital Archiving:</strong> High-resolution videos of preparation techniques with family commentary</li>
+            <li><strong>Sensory Training:</strong> Blind taste tests to recognize perfect texture and flavor profiles</li>
+            <li><strong>Ingredient Knowledge:</strong> Visits to farms to understand raw materials at source</li>
+            <li><strong>Cultural Context:</strong> Learning the history and significance behind each sweet</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <h3>A Message from Our Family</h3>
+            <p>"These recipes are our family's greatest treasure, and sharing them through our sweets is our way of honoring our ancestors while serving our community. When you taste a Jaswant sweet, you're experiencing generations of love, patience, and perfectionism in every bite."</p>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">You Might Also Like</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/modak.jpg" alt="Modak">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Divine Modak for Ganesh Chaturthi</h3>
+                            <p class="related-post-excerpt">Lord Ganesha's favorite sweet, made with traditional recipes passed down through generations.</p>
+                            <a href="modak-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                        <div class="related-post-content">
+                            <p class="blog-date">April 5, 2025</p>
+                            <h3 class="related-post-title">Healthy Mithai? Yes! Jaswant Sweets' Sugar-Free Collection</h3>
+                            <p class="related-post-excerpt">Explore our range of diabetic-friendly sweets made with natural sweeteners
+                                that let you indulge without guilt. Perfect for health-conscious sweet lovers.</p>
+                            <a href="sugar-free-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/kaju_katli.jpg" alt="Kaju Katli">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Our Signature Kaju Katli</h3>
+                            <p class="related-post-excerpt">Learn what makes our Kaju Katli a Diwali favorite</p>
+                            <a href="kaju-katli.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jaswant Sweets">
+    <meta name="keywords" content="Khari Biscuit, Nankhatai, Kolhapur bakery, traditional biscuits, tea time snacks, Indian bakery items">
+    <meta name="description" content="Discover Jaswant Sweets' bakery delights - from flaky Khari biscuits to melt-in-mouth Nankhatai, perfect companions for your chai and coffee">
+    <title>Jaswant Sweets' Bakery Delights – Fresh, Crispy & Irresistible! | Kolhapur</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300i,400,400i,500,500i,600,600i,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold */
+            --secondary-color: #8b0000; /* Deep red */
+            --text-color: #333;
+            --light-bg: #f9f5f0;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .blog-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/blog/bakery.webp');
+    background-size: contain; /* Changed from cover to contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Fallback color */
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* For larger screens where contain might leave empty space */
+@media (min-width: 992px) {
+    .blog-hero {
+        background-size: cover; /* Switch to cover on larger screens */
+        background-attachment: fixed; /* Optional parallax effect */
+    }
+}
+
+/* Ensure content stays centered and readable */
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4); /* Slightly darker overlay for better text contrast */
+    border-radius: 5px;
+}
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-author {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        
+        .blog-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        h2, h3 {
+            color: var(--secondary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .recipe-steps {
+            counter-reset: step-counter;
+            margin: 40px 0;
+        }
+        
+        .recipe-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .ingredients-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .product-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: var(--light-bg);
+        }
+        
+        .product-feature img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        
+        .product-feature-content {
+            flex: 1;
+        }
+        
+        .pairing-suggestions {
+            background-color: white;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .pairing-suggestions h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .social-share a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 10px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-share a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .related-posts {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 50px;
+        }
+        
+        .related-post-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .related-post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .related-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-post-content {
+            padding: 20px;
+        }
+        
+        .related-post-title {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .related-post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+            padding: 50px 0 20px;
+            color: white;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-content {
+                padding: 0 15px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .blog-author {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .product-feature {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .product-feature img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" alt="Jaswant Sweets">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sweets.html">Sweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../bakery.html">Bakery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Jaswant Sweets' Bakery Delights – Fresh, Crispy & Irresistible!</h1>
+            <p class="lead">Beyond mithai, discover our crunchy bakery items that pair perfectly with your morning chai or evening coffee</p>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <article class="blog-content">
+        <div class="blog-meta">
+            <span class="blog-date">November 5, 2024</span>
+            <!-- <span class="blog-author">By Chef Rajesh Jaswant</span> -->
+        </div>
+        
+        <p>While Jaswant Sweets is renowned for its traditional Indian sweets, our bakery section holds its own special place in Kolhapur's heart. For over two decades, we've been crafting bakery items that combine traditional recipes with perfect execution, creating snacks that are light, flavorful, and utterly addictive with your favorite beverages.</p>
+        
+        <div class="highlight-box">
+            <p>"Our bakery items aren't an afterthought - they're crafted with the same care as our sweets. The perfect Khari should shatter delicately with each bite, and Nankhatai should melt before it even touches your tongue." - Chef Rajesh Jaswant</p>
+        </div>
+        
+        <h2>Our Bakery Specialties</h2>
+        <p>While we offer a wide range of bakery products, these three have become customer favorites over the years:</p>
+        
+        <div class="product-feature">
+            <img src="../img/blog/khari_biscuit.jpg" alt="Khari Biscuit">
+            <div class="product-feature-content">
+                <h3>Khari Biscuit</h3>
+                <p>Our signature flaky, puff pastry biscuits that are light as air with a satisfying crunch. Made with pure ghee and a secret folding technique that creates hundreds of delicate layers.</p>
+                <p><strong>Perfect with:</strong> Masala chai, filter coffee, or as a base for chaat</p>
+            </div>
+        </div>
+        
+        <div class="product-feature">
+            <img src="../img/blog/nankhatai.jpg" alt="Nankhatai">
+            <div class="product-feature-content">
+                <h3>Nankhatai</h3>
+                <p>The classic Indian shortbread cookie with our special touch - a blend of besan and maida that creates the perfect crumbly texture, flavored with cardamom and nutmeg.</p>
+                <p><strong>Perfect with:</strong> Irani chai, milk, or as a sweet ending to meals</p>
+            </div>
+        </div>
+        
+        <div class="product-feature">
+            <img src="../img/blog/namak_para.jpg" alt="Namak Para">
+            <div class="product-feature-content">
+                <h3>Namak Para</h3>
+                <p>Our savory diamond-cut crackers seasoned with cumin and black pepper - not too hard, not too soft, with just the right amount of saltiness to keep you reaching for more.</p>
+                <p><strong>Perfect with:</strong> Evening tea, tomato soup, or as a cocktail snack</p>
+            </div>
+        </div>
+        
+        <h2>What Makes Our Bakery Items Special?</h2>
+        <p>In a market flooded with mass-produced biscuits, we maintain traditional methods that make all the difference:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <h4><i class="fas fa-clock text-primary"></i> Slow Preparation</h4>
+                <p>Our dough rests overnight for proper gluten development and flavor</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-temperature-low text-primary"></i> Precise Baking</h4>
+                <p>Stone ovens maintained at exact temperatures for even baking</p>
+            </div>
+            <div class="col-md-4">
+                <h4><i class="fas fa-calendar-day text-primary"></i> Daily Freshness</h4>
+                <p>Small batches made throughout the day rather than large weekly productions</p>
+            </div>
+        </div>
+        
+        <h2>The Khari Biscuit Secret</h2>
+        <p>Our Khari biscuits have developed a cult following in Kolhapur. Here's why they stand out:</p>
+        
+        <div class="recipe-steps">
+            <div class="recipe-step">
+                <h3>The Dough</h3>
+                <p>Made with premium maida and pure ghee in a specific ratio that creates flakiness without heaviness. The dough is kneaded by hand to just the right consistency.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>The Folding</h3>
+                <p>Our bakers perform a precise 7-fold technique that creates 128 layers - enough for perfect flakiness but not so many that the biscuit becomes tough.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>The Baking</h3>
+                <p>Baked at 180°C for exactly 22 minutes - hot enough to puff up the layers but gentle enough to prevent burning.</p>
+            </div>
+            
+            <div class="recipe-step">
+                <h3>The Cooling</h3>
+                <p>Left to cool gradually on marble slabs, which helps maintain the crisp texture without becoming brittle.</p>
+            </div>
+        </div>
+        
+        <div class="pairing-suggestions">
+            <h4>Perfect Pairings with Our Bakery Items</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-mug-hot text-primary"></i> With Tea</h5>
+                    <ul>
+                        <li>Khari + Masala Chai</li>
+                        <li>Nankhatai + Kashmiri Kahwa</li>
+                        <li>Namak Para + Lemon Tea</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-coffee text-primary"></i> With Coffee</h5>
+                    <ul>
+                        <li>Khari + South Indian Filter Coffee</li>
+                        <li>Nankhatai + Cappuccino</li>
+                        <li>Butter Biscuits + Cold Coffee</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-ice-cream text-primary"></i> Creative Uses</h5>
+                    <ul>
+                        <li>Crushed Khari as ice cream topping</li>
+                        <li>Nankhatai crumbs in milkshakes</li>
+                        <li>Namak Para in chaat preparations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Customer Favorites Through the Day</h2>
+        <p>Our regulars have established these patterns over the years:</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4><i class="fas fa-sun text-primary"></i> Morning</h4>
+                    <p>Khari Biscuits fly off the shelves between 7-9 AM as Kolhapur prepares for its morning tea ritual.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4><i class="fas fa-cloud-sun text-primary"></i> Afternoon</h4>
+                    <p>Namak Para sees peak sales as a light snack with midday tea or as lunchbox additions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-box" style="height: 100%;">
+                    <h4><i class="fas fa-moon text-primary"></i> Evening</h4>
+                    <p>Nankhatai dominates the evening hours, often purchased by grandparents for their grandchildren.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <h3>Pro Tip from Our Bakers</h3>
+            <p>"To restore crispness to day-old Khari, warm it in a preheated oven at 160°C for 3 minutes - it will taste freshly baked again. Never microwave bakery items as it makes them tough."</p>
+        </div>
+        
+        <div class="social-share">
+            <span>Share this article:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </article>
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="text-center mb-5">You Might Also Like</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/sugar_free.jpg" alt="Sugar Free Sweets">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Healthy Mithai? Yes!</h3>
+                            <p class="related-post-excerpt">Explore our range of diabetic-friendly sweets made with natural sweeteners
+                                that let you indulge without guilt.</p>
+                            <a href="sugar-free-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../img/blog/family_recipes.jpg" alt="Family Recipes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Preserving Tradition</h3>
+                            <p class="related-post-excerpt">A glimpse into our family's secret recipes passed down through generations.</p>
+                            <a href="family-recipes-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="img/blog/gift-box.jpg" alt="Gift and Snack Boxes">
+                        <div class="related-post-content">
+                            <h3 class="related-post-title">Celebrations Made Sweeter: Jaswant’s Gift & Snack Boxes</h3>
+                            <p class="related-post-excerpt">Perfect for every occasion, Jaswant Sweets' beautifully curated gift and
+                                snack boxes bring together tradition, taste, and thoughtful packaging in one delightful bundle.</p>
+                            <a href="gift-snack-box-blog.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Jaswant Sweets</h5>
+                    <p>Since 1975, Jaswant Sweets has been serving Kolhapur with authentic Maharashtrian sweets and snacks, preserving traditional recipes with pure ingredients and uncompromising quality.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Shop No. 32, Shahaji Law College Complex,<br>
+                    Opp. Appa's Complex, Rajarampuri Main Road,<br>
+                    Kolhapur - 416008</p>
+                    <p>Phone: 0231-2529877<br>
+                    Email: info@jaswantsweets.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Jaswant Sweets, Kolhapur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
